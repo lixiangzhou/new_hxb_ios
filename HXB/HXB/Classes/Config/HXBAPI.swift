@@ -8,6 +8,9 @@
 
 import UIKit
 
-class HXBAPI: NSObject {
-
+extension hxb {
+    struct api {        
+        /// 获取token 【/token】
+        static let token = "/token"
+    }
 }

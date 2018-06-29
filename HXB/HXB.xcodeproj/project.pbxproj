@@ -34,6 +34,11 @@
 		8D57AFB920E6202800CA3F5A /* HXBFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AFB820E6202800CA3F5A /* HXBFont.swift */; };
 		8D57AFBB20E6204100CA3F5A /* HXBConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AFBA20E6204100CA3F5A /* HXBConfig.swift */; };
 		8D57AFBD20E6204B00CA3F5A /* HXBNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AFBC20E6204B00CA3F5A /* HXBNet.swift */; };
+		8D57AFBF20E626FC00CA3F5A /* HXBKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AFBE20E626FC00CA3F5A /* HXBKeychain.swift */; };
+		8D57AFC120E6281800CA3F5A /* HXBError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AFC020E6281800CA3F5A /* HXBError.swift */; };
+		8D57AFC320E6282300CA3F5A /* HXBCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AFC220E6282300CA3F5A /* HXBCode.swift */; };
+		8D57AFC720E62A6F00CA3F5A /* JSON+HXB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AFC620E62A6F00CA3F5A /* JSON+HXB.swift */; };
+		8D57AFC920E62EDB00CA3F5A /* HXBSignal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AFC820E62EDB00CA3F5A /* HXBSignal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +71,11 @@
 		8D57AFB820E6202800CA3F5A /* HXBFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBFont.swift; sourceTree = "<group>"; };
 		8D57AFBA20E6204100CA3F5A /* HXBConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBConfig.swift; sourceTree = "<group>"; };
 		8D57AFBC20E6204B00CA3F5A /* HXBNet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBNet.swift; sourceTree = "<group>"; };
+		8D57AFBE20E626FC00CA3F5A /* HXBKeychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBKeychain.swift; sourceTree = "<group>"; };
+		8D57AFC020E6281800CA3F5A /* HXBError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBError.swift; sourceTree = "<group>"; };
+		8D57AFC220E6282300CA3F5A /* HXBCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBCode.swift; sourceTree = "<group>"; };
+		8D57AFC620E62A6F00CA3F5A /* JSON+HXB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSON+HXB.swift"; sourceTree = "<group>"; };
+		8D57AFC820E62EDB00CA3F5A /* HXBSignal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBSignal.swift; sourceTree = "<group>"; };
 		D700915060D738EFF63636CD /* Pods-HXB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HXB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HXB/Pods-HXB.debug.xcconfig"; sourceTree = "<group>"; };
 		FE6381BBAB3DDF96B52EBF4D /* Pods_HXB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HXB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -196,6 +206,8 @@
 				8D57AFB620E6201E00CA3F5A /* HXBLength.swift */,
 				8D57AFB820E6202800CA3F5A /* HXBFont.swift */,
 				8D57AFBA20E6204100CA3F5A /* HXBConfig.swift */,
+				8D57AFC020E6281800CA3F5A /* HXBError.swift */,
+				8D57AFC220E6282300CA3F5A /* HXBCode.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -231,6 +243,9 @@
 		8D57AF7920E6066C00CA3F5A /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				8D57AFBE20E626FC00CA3F5A /* HXBKeychain.swift */,
+				8D57AFC620E62A6F00CA3F5A /* JSON+HXB.swift */,
+				8D57AFC820E62EDB00CA3F5A /* HXBSignal.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -512,7 +527,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D57AF8820E607EC00CA3F5A /* HXBShakeConfigUrlView.swift in Sources */,
+				8D57AFC120E6281800CA3F5A /* HXBError.swift in Sources */,
 				8D57AFB320E61FE100CA3F5A /* HXBString.swift in Sources */,
+				8D57AFBF20E626FC00CA3F5A /* HXBKeychain.swift in Sources */,
+				8D57AFC720E62A6F00CA3F5A /* JSON+HXB.swift in Sources */,
 				8D57AFA920E6092200CA3F5A /* HXBMineController.swift in Sources */,
 				8D57AFAB20E60C3F00CA3F5A /* HXBRequestApi.swift in Sources */,
 				8D57AFB120E60CB900CA3F5A /* HXBNetActivityManager.swift in Sources */,
@@ -534,7 +552,9 @@
 				8D57AF7C20E6073A00CA3F5A /* HXBViewController.swift in Sources */,
 				8D57AF8220E6078100CA3F5A /* HXBModel.swift in Sources */,
 				8D57AFBB20E6204100CA3F5A /* HXBConfig.swift in Sources */,
+				8D57AFC320E6282300CA3F5A /* HXBCode.swift in Sources */,
 				8D57AF9120E6084500CA3F5A /* ActiveType.swift in Sources */,
+				8D57AFC920E62EDB00CA3F5A /* HXBSignal.swift in Sources */,
 				8D57AFA520E608F700CA3F5A /* HXBHomeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
