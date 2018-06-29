@@ -40,6 +40,10 @@
 		8D57AFC720E62A6F00CA3F5A /* JSON+HXB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AFC620E62A6F00CA3F5A /* JSON+HXB.swift */; };
 		8D57AFC920E62EDB00CA3F5A /* HXBSignal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AFC820E62EDB00CA3F5A /* HXBSignal.swift */; };
 		8D57AFCB20E633DD00CA3F5A /* HXBHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AFCA20E633DD00CA3F5A /* HXBHUD.swift */; };
+		8D57AFCD20E6361300CA3F5A /* UIButton+HXB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AFCC20E6361300CA3F5A /* UIButton+HXB.swift */; };
+		8D57AFCF20E6361F00CA3F5A /* UIImageView+HXB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AFCE20E6361F00CA3F5A /* UIImageView+HXB.swift */; };
+		8D57AFD320E6362F00CA3F5A /* UIImage+HXB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AFD220E6362F00CA3F5A /* UIImage+HXB.swift */; };
+		8D57AFD520E6363600CA3F5A /* UILabel+HXB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AFD420E6363600CA3F5A /* UILabel+HXB.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +82,10 @@
 		8D57AFC620E62A6F00CA3F5A /* JSON+HXB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSON+HXB.swift"; sourceTree = "<group>"; };
 		8D57AFC820E62EDB00CA3F5A /* HXBSignal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBSignal.swift; sourceTree = "<group>"; };
 		8D57AFCA20E633DD00CA3F5A /* HXBHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBHUD.swift; sourceTree = "<group>"; };
+		8D57AFCC20E6361300CA3F5A /* UIButton+HXB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+HXB.swift"; sourceTree = "<group>"; };
+		8D57AFCE20E6361F00CA3F5A /* UIImageView+HXB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+HXB.swift"; sourceTree = "<group>"; };
+		8D57AFD220E6362F00CA3F5A /* UIImage+HXB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+HXB.swift"; sourceTree = "<group>"; };
+		8D57AFD420E6363600CA3F5A /* UILabel+HXB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+HXB.swift"; sourceTree = "<group>"; };
 		D700915060D738EFF63636CD /* Pods-HXB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HXB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HXB/Pods-HXB.debug.xcconfig"; sourceTree = "<group>"; };
 		FE6381BBAB3DDF96B52EBF4D /* Pods_HXB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HXB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -249,6 +257,10 @@
 				8D57AFC620E62A6F00CA3F5A /* JSON+HXB.swift */,
 				8D57AFC820E62EDB00CA3F5A /* HXBSignal.swift */,
 				8D57AFCA20E633DD00CA3F5A /* HXBHUD.swift */,
+				8D57AFCC20E6361300CA3F5A /* UIButton+HXB.swift */,
+				8D57AFCE20E6361F00CA3F5A /* UIImageView+HXB.swift */,
+				8D57AFD220E6362F00CA3F5A /* UIImage+HXB.swift */,
+				8D57AFD420E6363600CA3F5A /* UILabel+HXB.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -536,9 +548,11 @@
 				8D57AFC720E62A6F00CA3F5A /* JSON+HXB.swift in Sources */,
 				8D57AFA920E6092200CA3F5A /* HXBMineController.swift in Sources */,
 				8D57AFAB20E60C3F00CA3F5A /* HXBRequestApi.swift in Sources */,
+				8D57AFD520E6363600CA3F5A /* UILabel+HXB.swift in Sources */,
 				8D57AFB120E60CB900CA3F5A /* HXBNetActivityManager.swift in Sources */,
 				8D57AF7E20E6075200CA3F5A /* HXBTabBarController.swift in Sources */,
 				8D57AFB520E61FEA00CA3F5A /* HXBColor.swift in Sources */,
+				8D57AFCF20E6361F00CA3F5A /* UIImageView+HXB.swift in Sources */,
 				8D57AFB720E6201E00CA3F5A /* HXBLength.swift in Sources */,
 				8D57AFAF20E60C7A00CA3F5A /* HXBNetworkManager.swift in Sources */,
 				8D57AFB920E6202800CA3F5A /* HXBFont.swift in Sources */,
@@ -548,7 +562,9 @@
 				8D57AF9320E6084500CA3F5A /* StringTrimExtension.swift in Sources */,
 				8D57AF8420E6079300CA3F5A /* HXBViewModel.swift in Sources */,
 				8D57AF9020E6084500CA3F5A /* ActiveLabel.swift in Sources */,
+				8D57AFD320E6362F00CA3F5A /* UIImage+HXB.swift in Sources */,
 				8D57AFA720E6090C00CA3F5A /* HXBInvestController.swift in Sources */,
+				8D57AFCD20E6361300CA3F5A /* UIButton+HXB.swift in Sources */,
 				8D57AF9220E6084500CA3F5A /* RegexParser.swift in Sources */,
 				8D57AFAD20E60C6C00CA3F5A /* HXBAPI.swift in Sources */,
 				8D57AFBD20E6204B00CA3F5A /* HXBNet.swift in Sources */,
