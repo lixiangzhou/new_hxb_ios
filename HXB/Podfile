@@ -1,0 +1,19 @@
+# platform :ios, '9.0'
+
+target 'HXB' do
+  use_frameworks!
+
+pod 'Alamofire'
+pod 'SnapKit'
+pod 'Neon'
+pod 'Kingfisher'
+pod 'ReactiveCocoa'
+pod 'KeychainAccess'
+pod 'SwiftyBeaver'
+pod 'HandyJSON'
+pod 'SwiftyJSON'
+pod 'IQKeyboardManagerSwift'
+pod 'WKWebViewJavascriptBridge'
+pod 'XZLib'
+
+end

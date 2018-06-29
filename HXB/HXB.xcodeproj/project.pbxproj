@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37E15F76F0FC7256DA075C11 /* Pods_HXB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6381BBAB3DDF96B52EBF4D /* Pods_HXB.framework */; };
 		8D57AF5D20E5CA2900CA3F5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AF5C20E5CA2900CA3F5A /* AppDelegate.swift */; };
 		8D57AF6420E5CA2B00CA3F5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D57AF6320E5CA2B00CA3F5A /* Assets.xcassets */; };
 		8D57AF7C20E6073A00CA3F5A /* HXBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AF7B20E6073A00CA3F5A /* HXBViewController.swift */; };
@@ -24,9 +25,14 @@
 		8D57AFA520E608F700CA3F5A /* HXBHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AFA420E608F700CA3F5A /* HXBHomeController.swift */; };
 		8D57AFA720E6090C00CA3F5A /* HXBInvestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AFA620E6090C00CA3F5A /* HXBInvestController.swift */; };
 		8D57AFA920E6092200CA3F5A /* HXBMineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AFA820E6092200CA3F5A /* HXBMineController.swift */; };
+		8D57AFAB20E60C3F00CA3F5A /* HXBRequestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AFAA20E60C3F00CA3F5A /* HXBRequestApi.swift */; };
+		8D57AFAD20E60C6C00CA3F5A /* HXBAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AFAC20E60C6C00CA3F5A /* HXBAPI.swift */; };
+		8D57AFAF20E60C7A00CA3F5A /* HXBNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AFAE20E60C7A00CA3F5A /* HXBNetworkManager.swift */; };
+		8D57AFB120E60CB900CA3F5A /* HXBNetActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AFB020E60CB900CA3F5A /* HXBNetActivityManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04B33EFEC459D36B73168500 /* Pods-HXB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HXB.release.xcconfig"; path = "Pods/Target Support Files/Pods-HXB/Pods-HXB.release.xcconfig"; sourceTree = "<group>"; };
 		8D57AF5920E5CA2900CA3F5A /* HXB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HXB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D57AF5C20E5CA2900CA3F5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D57AF6320E5CA2B00CA3F5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -46,6 +52,12 @@
 		8D57AFA420E608F700CA3F5A /* HXBHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBHomeController.swift; sourceTree = "<group>"; };
 		8D57AFA620E6090C00CA3F5A /* HXBInvestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBInvestController.swift; sourceTree = "<group>"; };
 		8D57AFA820E6092200CA3F5A /* HXBMineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBMineController.swift; sourceTree = "<group>"; };
+		8D57AFAA20E60C3F00CA3F5A /* HXBRequestApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBRequestApi.swift; sourceTree = "<group>"; };
+		8D57AFAC20E60C6C00CA3F5A /* HXBAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBAPI.swift; sourceTree = "<group>"; };
+		8D57AFAE20E60C7A00CA3F5A /* HXBNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBNetworkManager.swift; sourceTree = "<group>"; };
+		8D57AFB020E60CB900CA3F5A /* HXBNetActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBNetActivityManager.swift; sourceTree = "<group>"; };
+		D700915060D738EFF63636CD /* Pods-HXB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HXB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HXB/Pods-HXB.debug.xcconfig"; sourceTree = "<group>"; };
+		FE6381BBAB3DDF96B52EBF4D /* Pods_HXB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HXB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,17 +65,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37E15F76F0FC7256DA075C11 /* Pods_HXB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29170E650E634D61720DB01B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE6381BBAB3DDF96B52EBF4D /* Pods_HXB.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		491BAAF334DEE4F5405B7318 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D700915060D738EFF63636CD /* Pods-HXB.debug.xcconfig */,
+				04B33EFEC459D36B73168500 /* Pods-HXB.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8D57AF5020E5CA2900CA3F5A = {
 			isa = PBXGroup;
 			children = (
 				8D57AF5B20E5CA2900CA3F5A /* HXB */,
 				8D57AF5A20E5CA2900CA3F5A /* Products */,
+				491BAAF334DEE4F5405B7318 /* Pods */,
+				29170E650E634D61720DB01B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,12 +121,12 @@
 		8D57AF6F20E6066C00CA3F5A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				8D57AF7020E6066C00CA3F5A /* Basics */,
-				8D57AF7520E6066C00CA3F5A /* Config */,
 				8D57AF7620E6066C00CA3F5A /* Main */,
+				8D57AF7020E6066C00CA3F5A /* Basics */,
 				8D57AF7720E6066C00CA3F5A /* Network */,
-				8D57AF7820E6066C00CA3F5A /* Other */,
+				8D57AF7520E6066C00CA3F5A /* Config */,
 				8D57AF7920E6066C00CA3F5A /* Util */,
+				8D57AF7820E6066C00CA3F5A /* Other */,
 				8D57AF7A20E6066C00CA3F5A /* Vender */,
 			);
 			path = Classes;
@@ -165,6 +197,10 @@
 		8D57AF7720E6066C00CA3F5A /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				8D57AFAA20E60C3F00CA3F5A /* HXBRequestApi.swift */,
+				8D57AFAC20E60C6C00CA3F5A /* HXBAPI.swift */,
+				8D57AFAE20E60C7A00CA3F5A /* HXBNetworkManager.swift */,
+				8D57AFB020E60CB900CA3F5A /* HXBNetActivityManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -331,9 +367,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D57AF6B20E5CA2B00CA3F5A /* Build configuration list for PBXNativeTarget "HXB" */;
 			buildPhases = (
+				FADB813C27524EFE3669F697 /* [CP] Check Pods Manifest.lock */,
 				8D57AF5520E5CA2900CA3F5A /* Sources */,
 				8D57AF5620E5CA2900CA3F5A /* Frameworks */,
 				8D57AF5720E5CA2900CA3F5A /* Resources */,
+				138F03BE6FBD544D74077EE0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -388,6 +426,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		138F03BE6FBD544D74077EE0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HXB/Pods-HXB-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Neon/Neon.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/WKWebViewJavascriptBridge/WKWebViewJavascriptBridge.framework",
+				"${BUILT_PRODUCTS_DIR}/XZLib/XZLib.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Neon.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WKWebViewJavascriptBridge.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XZLib.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HXB/Pods-HXB-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FADB813C27524EFE3669F697 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HXB-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8D57AF5520E5CA2900CA3F5A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -395,7 +498,10 @@
 			files = (
 				8D57AF8820E607EC00CA3F5A /* HXBShakeConfigUrlView.swift in Sources */,
 				8D57AFA920E6092200CA3F5A /* HXBMineController.swift in Sources */,
+				8D57AFAB20E60C3F00CA3F5A /* HXBRequestApi.swift in Sources */,
+				8D57AFB120E60CB900CA3F5A /* HXBNetActivityManager.swift in Sources */,
 				8D57AF7E20E6075200CA3F5A /* HXBTabBarController.swift in Sources */,
+				8D57AFAF20E60C7A00CA3F5A /* HXBNetworkManager.swift in Sources */,
 				8D57AF5D20E5CA2900CA3F5A /* AppDelegate.swift in Sources */,
 				8D57AF8F20E6084500CA3F5A /* ActiveBuilder.swift in Sources */,
 				8D57AF8020E6076F00CA3F5A /* HXBNavigationController.swift in Sources */,
@@ -405,6 +511,7 @@
 				8D57AFA720E6090C00CA3F5A /* HXBInvestController.swift in Sources */,
 				8D57AF8620E607A000CA3F5A /* HXBNetConfig.swift in Sources */,
 				8D57AF9220E6084500CA3F5A /* RegexParser.swift in Sources */,
+				8D57AFAD20E60C6C00CA3F5A /* HXBAPI.swift in Sources */,
 				8D57AF7C20E6073A00CA3F5A /* HXBViewController.swift in Sources */,
 				8D57AF8220E6078100CA3F5A /* HXBModel.swift in Sources */,
 				8D57AF9120E6084500CA3F5A /* ActiveType.swift in Sources */,
@@ -531,17 +638,15 @@
 		};
 		8D57AF6C20E5CA2B00CA3F5A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D700915060D738EFF63636CD /* Pods-HXB.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z9M2NMJFP5;
 				INFOPLIST_FILE = HXB/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lxz.HXB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -551,17 +656,15 @@
 		};
 		8D57AF6D20E5CA2B00CA3F5A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04B33EFEC459D36B73168500 /* Pods-HXB.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z9M2NMJFP5;
 				INFOPLIST_FILE = HXB/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lxz.HXB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
