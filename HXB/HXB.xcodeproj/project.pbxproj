@@ -15,7 +15,6 @@
 		8D57AF8020E6076F00CA3F5A /* HXBNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AF7F20E6076F00CA3F5A /* HXBNavigationController.swift */; };
 		8D57AF8220E6078100CA3F5A /* HXBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AF8120E6078100CA3F5A /* HXBModel.swift */; };
 		8D57AF8420E6079300CA3F5A /* HXBViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AF8320E6079300CA3F5A /* HXBViewModel.swift */; };
-		8D57AF8620E607A000CA3F5A /* HXBNetConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AF8520E607A000CA3F5A /* HXBNetConfig.swift */; };
 		8D57AF8820E607EC00CA3F5A /* HXBShakeConfigUrlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AF8720E607EC00CA3F5A /* HXBShakeConfigUrlView.swift */; };
 		8D57AF8F20E6084500CA3F5A /* ActiveBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AF8A20E6084500CA3F5A /* ActiveBuilder.swift */; };
 		8D57AF9020E6084500CA3F5A /* ActiveLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AF8B20E6084500CA3F5A /* ActiveLabel.swift */; };
@@ -29,6 +28,12 @@
 		8D57AFAD20E60C6C00CA3F5A /* HXBAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AFAC20E60C6C00CA3F5A /* HXBAPI.swift */; };
 		8D57AFAF20E60C7A00CA3F5A /* HXBNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AFAE20E60C7A00CA3F5A /* HXBNetworkManager.swift */; };
 		8D57AFB120E60CB900CA3F5A /* HXBNetActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AFB020E60CB900CA3F5A /* HXBNetActivityManager.swift */; };
+		8D57AFB320E61FE100CA3F5A /* HXBString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AFB220E61FE100CA3F5A /* HXBString.swift */; };
+		8D57AFB520E61FEA00CA3F5A /* HXBColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AFB420E61FEA00CA3F5A /* HXBColor.swift */; };
+		8D57AFB720E6201E00CA3F5A /* HXBLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AFB620E6201E00CA3F5A /* HXBLength.swift */; };
+		8D57AFB920E6202800CA3F5A /* HXBFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AFB820E6202800CA3F5A /* HXBFont.swift */; };
+		8D57AFBB20E6204100CA3F5A /* HXBConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AFBA20E6204100CA3F5A /* HXBConfig.swift */; };
+		8D57AFBD20E6204B00CA3F5A /* HXBNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AFBC20E6204B00CA3F5A /* HXBNet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +47,6 @@
 		8D57AF7F20E6076F00CA3F5A /* HXBNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBNavigationController.swift; sourceTree = "<group>"; };
 		8D57AF8120E6078100CA3F5A /* HXBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBModel.swift; sourceTree = "<group>"; };
 		8D57AF8320E6079300CA3F5A /* HXBViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBViewModel.swift; sourceTree = "<group>"; };
-		8D57AF8520E607A000CA3F5A /* HXBNetConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBNetConfig.swift; sourceTree = "<group>"; };
 		8D57AF8720E607EC00CA3F5A /* HXBShakeConfigUrlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBShakeConfigUrlView.swift; sourceTree = "<group>"; };
 		8D57AF8A20E6084500CA3F5A /* ActiveBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveBuilder.swift; sourceTree = "<group>"; };
 		8D57AF8B20E6084500CA3F5A /* ActiveLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveLabel.swift; sourceTree = "<group>"; };
@@ -56,6 +60,12 @@
 		8D57AFAC20E60C6C00CA3F5A /* HXBAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBAPI.swift; sourceTree = "<group>"; };
 		8D57AFAE20E60C7A00CA3F5A /* HXBNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBNetworkManager.swift; sourceTree = "<group>"; };
 		8D57AFB020E60CB900CA3F5A /* HXBNetActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBNetActivityManager.swift; sourceTree = "<group>"; };
+		8D57AFB220E61FE100CA3F5A /* HXBString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBString.swift; sourceTree = "<group>"; };
+		8D57AFB420E61FEA00CA3F5A /* HXBColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBColor.swift; sourceTree = "<group>"; };
+		8D57AFB620E6201E00CA3F5A /* HXBLength.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBLength.swift; sourceTree = "<group>"; };
+		8D57AFB820E6202800CA3F5A /* HXBFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBFont.swift; sourceTree = "<group>"; };
+		8D57AFBA20E6204100CA3F5A /* HXBConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBConfig.swift; sourceTree = "<group>"; };
+		8D57AFBC20E6204B00CA3F5A /* HXBNet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBNet.swift; sourceTree = "<group>"; };
 		D700915060D738EFF63636CD /* Pods-HXB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HXB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HXB/Pods-HXB.debug.xcconfig"; sourceTree = "<group>"; };
 		FE6381BBAB3DDF96B52EBF4D /* Pods_HXB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HXB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -179,7 +189,13 @@
 		8D57AF7520E6066C00CA3F5A /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				8D57AF8520E607A000CA3F5A /* HXBNetConfig.swift */,
+				8D57AFAC20E60C6C00CA3F5A /* HXBAPI.swift */,
+				8D57AFBC20E6204B00CA3F5A /* HXBNet.swift */,
+				8D57AFB220E61FE100CA3F5A /* HXBString.swift */,
+				8D57AFB420E61FEA00CA3F5A /* HXBColor.swift */,
+				8D57AFB620E6201E00CA3F5A /* HXBLength.swift */,
+				8D57AFB820E6202800CA3F5A /* HXBFont.swift */,
+				8D57AFBA20E6204100CA3F5A /* HXBConfig.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -198,7 +214,6 @@
 			isa = PBXGroup;
 			children = (
 				8D57AFAA20E60C3F00CA3F5A /* HXBRequestApi.swift */,
-				8D57AFAC20E60C6C00CA3F5A /* HXBAPI.swift */,
 				8D57AFAE20E60C7A00CA3F5A /* HXBNetworkManager.swift */,
 				8D57AFB020E60CB900CA3F5A /* HXBNetActivityManager.swift */,
 			);
@@ -497,11 +512,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D57AF8820E607EC00CA3F5A /* HXBShakeConfigUrlView.swift in Sources */,
+				8D57AFB320E61FE100CA3F5A /* HXBString.swift in Sources */,
 				8D57AFA920E6092200CA3F5A /* HXBMineController.swift in Sources */,
 				8D57AFAB20E60C3F00CA3F5A /* HXBRequestApi.swift in Sources */,
 				8D57AFB120E60CB900CA3F5A /* HXBNetActivityManager.swift in Sources */,
 				8D57AF7E20E6075200CA3F5A /* HXBTabBarController.swift in Sources */,
+				8D57AFB520E61FEA00CA3F5A /* HXBColor.swift in Sources */,
+				8D57AFB720E6201E00CA3F5A /* HXBLength.swift in Sources */,
 				8D57AFAF20E60C7A00CA3F5A /* HXBNetworkManager.swift in Sources */,
+				8D57AFB920E6202800CA3F5A /* HXBFont.swift in Sources */,
 				8D57AF5D20E5CA2900CA3F5A /* AppDelegate.swift in Sources */,
 				8D57AF8F20E6084500CA3F5A /* ActiveBuilder.swift in Sources */,
 				8D57AF8020E6076F00CA3F5A /* HXBNavigationController.swift in Sources */,
@@ -509,11 +528,12 @@
 				8D57AF8420E6079300CA3F5A /* HXBViewModel.swift in Sources */,
 				8D57AF9020E6084500CA3F5A /* ActiveLabel.swift in Sources */,
 				8D57AFA720E6090C00CA3F5A /* HXBInvestController.swift in Sources */,
-				8D57AF8620E607A000CA3F5A /* HXBNetConfig.swift in Sources */,
 				8D57AF9220E6084500CA3F5A /* RegexParser.swift in Sources */,
 				8D57AFAD20E60C6C00CA3F5A /* HXBAPI.swift in Sources */,
+				8D57AFBD20E6204B00CA3F5A /* HXBNet.swift in Sources */,
 				8D57AF7C20E6073A00CA3F5A /* HXBViewController.swift in Sources */,
 				8D57AF8220E6078100CA3F5A /* HXBModel.swift in Sources */,
+				8D57AFBB20E6204100CA3F5A /* HXBConfig.swift in Sources */,
 				8D57AF9120E6084500CA3F5A /* ActiveType.swift in Sources */,
 				8D57AFA520E608F700CA3F5A /* HXBHomeController.swift in Sources */,
 			);
@@ -646,7 +666,10 @@
 				DEVELOPMENT_TEAM = Z9M2NMJFP5;
 				INFOPLIST_FILE = HXB/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lxz.HXB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -664,7 +687,10 @@
 				DEVELOPMENT_TEAM = Z9M2NMJFP5;
 				INFOPLIST_FILE = HXB/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lxz.HXB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

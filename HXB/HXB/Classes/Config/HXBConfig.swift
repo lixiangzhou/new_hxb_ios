@@ -1,5 +1,5 @@
 //
-//  HXBNetConfig.swift
+//  HXBConfig.swift
 //  HXB
 //
 //  Created by lxz on 2018/6/29.
@@ -8,6 +8,5 @@
 
 import UIKit
 
-class HXBNetConfig: NSObject {
-
+struct hxb {
 }
