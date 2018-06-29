@@ -39,6 +39,7 @@
 		8D57AFC320E6282300CA3F5A /* HXBCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AFC220E6282300CA3F5A /* HXBCode.swift */; };
 		8D57AFC720E62A6F00CA3F5A /* JSON+HXB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AFC620E62A6F00CA3F5A /* JSON+HXB.swift */; };
 		8D57AFC920E62EDB00CA3F5A /* HXBSignal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AFC820E62EDB00CA3F5A /* HXBSignal.swift */; };
+		8D57AFCB20E633DD00CA3F5A /* HXBHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AFCA20E633DD00CA3F5A /* HXBHUD.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		8D57AFC220E6282300CA3F5A /* HXBCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBCode.swift; sourceTree = "<group>"; };
 		8D57AFC620E62A6F00CA3F5A /* JSON+HXB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSON+HXB.swift"; sourceTree = "<group>"; };
 		8D57AFC820E62EDB00CA3F5A /* HXBSignal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBSignal.swift; sourceTree = "<group>"; };
+		8D57AFCA20E633DD00CA3F5A /* HXBHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBHUD.swift; sourceTree = "<group>"; };
 		D700915060D738EFF63636CD /* Pods-HXB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HXB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HXB/Pods-HXB.debug.xcconfig"; sourceTree = "<group>"; };
 		FE6381BBAB3DDF96B52EBF4D /* Pods_HXB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HXB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -246,6 +248,7 @@
 				8D57AFBE20E626FC00CA3F5A /* HXBKeychain.swift */,
 				8D57AFC620E62A6F00CA3F5A /* JSON+HXB.swift */,
 				8D57AFC820E62EDB00CA3F5A /* HXBSignal.swift */,
+				8D57AFCA20E633DD00CA3F5A /* HXBHUD.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -550,6 +553,7 @@
 				8D57AFAD20E60C6C00CA3F5A /* HXBAPI.swift in Sources */,
 				8D57AFBD20E6204B00CA3F5A /* HXBNet.swift in Sources */,
 				8D57AF7C20E6073A00CA3F5A /* HXBViewController.swift in Sources */,
+				8D57AFCB20E633DD00CA3F5A /* HXBHUD.swift in Sources */,
 				8D57AF8220E6078100CA3F5A /* HXBModel.swift in Sources */,
 				8D57AFBB20E6204100CA3F5A /* HXBConfig.swift in Sources */,
 				8D57AFC320E6282300CA3F5A /* HXBCode.swift in Sources */,
