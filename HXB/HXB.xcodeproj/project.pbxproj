@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		37E15F76F0FC7256DA075C11 /* Pods_HXB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6381BBAB3DDF96B52EBF4D /* Pods_HXB.framework */; };
+		8D39140820E640AE0005AF9E /* HXBMineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D39140720E640AE0005AF9E /* HXBMineViewModel.swift */; };
 		8D57AF5D20E5CA2900CA3F5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AF5C20E5CA2900CA3F5A /* AppDelegate.swift */; };
 		8D57AF6420E5CA2B00CA3F5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D57AF6320E5CA2B00CA3F5A /* Assets.xcassets */; };
 		8D57AF7C20E6073A00CA3F5A /* HXBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AF7B20E6073A00CA3F5A /* HXBViewController.swift */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		04B33EFEC459D36B73168500 /* Pods-HXB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HXB.release.xcconfig"; path = "Pods/Target Support Files/Pods-HXB/Pods-HXB.release.xcconfig"; sourceTree = "<group>"; };
+		8D39140720E640AE0005AF9E /* HXBMineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBMineViewModel.swift; sourceTree = "<group>"; };
 		8D57AF5920E5CA2900CA3F5A /* HXB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HXB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D57AF5C20E5CA2900CA3F5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D57AF6320E5CA2B00CA3F5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -321,6 +323,7 @@
 		8D57AF9920E608D700CA3F5A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8D39140720E640AE0005AF9E /* HXBMineViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -565,6 +568,7 @@
 				8D57AFD320E6362F00CA3F5A /* UIImage+HXB.swift in Sources */,
 				8D57AFA720E6090C00CA3F5A /* HXBInvestController.swift in Sources */,
 				8D57AFCD20E6361300CA3F5A /* UIButton+HXB.swift in Sources */,
+				8D39140820E640AE0005AF9E /* HXBMineViewModel.swift in Sources */,
 				8D57AF9220E6084500CA3F5A /* RegexParser.swift in Sources */,
 				8D57AFAD20E60C6C00CA3F5A /* HXBAPI.swift in Sources */,
 				8D57AFBD20E6204B00CA3F5A /* HXBNet.swift in Sources */,

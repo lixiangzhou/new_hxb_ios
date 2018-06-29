@@ -18,6 +18,7 @@ class HXBTabBarController: UITabBarController {
     }
 }
 
+// MARK: - UI
 extension HXBTabBarController {
     fileprivate func addChildControllers() {
         add(childController: HXBHomeController(), title: "首页", imageName: "tabbar_home")
@@ -40,5 +41,12 @@ extension HXBTabBarController {
         
         let navVC = HXBNavigationController(rootViewController: childController)
         addChildViewController(navVC)
+    }
+}
+
+// MARK: - Other
+extension HXBTabBarController {
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        HXBShakeConfigUrlView.show()
     }
 }

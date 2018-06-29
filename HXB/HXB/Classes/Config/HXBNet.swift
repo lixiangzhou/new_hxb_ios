@@ -11,9 +11,7 @@ import AdSupport
 
 extension hxb {
     struct net {
-        static var baseUrl: String {
-            return hxb.string.storedBaseUrl ?? "http://192.168.1.36:3100"
-        }
+        static var baseUrl = hxb.string.storedBaseUrl ?? "http://192.168.1.27:3100"
         
         static let tokenKey = "X-Hxb-Auth-Token"
         static let userAgent = "X-Hxb-User-Agent"
