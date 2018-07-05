@@ -12,24 +12,64 @@ class HXBInvestController: HXBViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        setUI()
     }
     
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+// MARK: - UI
+extension HXBInvestController {
+    fileprivate func setUI() {
+        backItemStyle = .none
+        navigationBarBackgroundStyle = .clear
+        
+        setSegView()
     }
-    */
-
+    
+    private func setSegView() {
+        let topView = UIView()
+        topView.backgroundColor = .white
+        view.addSubview(topView)
+        
+        let tempView = UIView()
+        topView.addSubview(tempView)
+        
+        let segView = HXBSegView()
+        segView.items = ["红利智投", "散标", "债权转让"]
+        segView.itemSelectedColor = hxb.color.theme
+        segView.itemNormalColor = hxb.color.important
+        segView.itemHighlightColor = hxb.color.theme
+        segView.itemFont = hxb.font.f15
+        segView.sepLineColor = .clear
+        segView.animateLineWidth = 28
+        segView.animateLineHeight = 3
+        segView.animateLineColor = hxb.color.theme
+        
+        topView.addSubview(segView)
+        
+        let bottomLine = UIView()
+        bottomLine.backgroundColor = hxb.color.background
+        segView.insertSubview(bottomLine, belowSubview: segView.animateLine)
+        
+        topView.snp.makeConstraints { maker in
+            maker.top.left.right.equalToSuperview()
+            maker.height.equalTo(hxb.length.navigationHeight)
+        }
+        
+        tempView.snp.makeConstraints { maker in
+            maker.top.left.right.equalToSuperview()
+            maker.height.equalTo(hxb.length.statusBarHeight)
+        }
+        
+        segView.snp.makeConstraints { maker in
+            maker.bottom.left.right.equalToSuperview()
+            maker.top.equalTo(tempView.snp.bottom)
+        }
+        
+        bottomLine.snp.makeConstraints { maker in
+            maker.bottom.left.right.equalToSuperview()
+            maker.height.equalTo(2)
+        }
+    }
 }

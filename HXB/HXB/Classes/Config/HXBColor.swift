@@ -13,7 +13,7 @@ extension hxb {
         
         /// 用于特别需要强调和突出的文字、按钮和icon 【f55151】
         static let mostImport = UIColor(stringHexValue: "f55151")!
-        static let theme = UIColor(stringHexValue: "ff4b28")!
+        static let theme = UIColor(stringHexValue: "ff3b2d")!
         
         /// 用于重要的文字信息、内容标题 【333333】
         static let important = UIColor(stringHexValue: "333333")!
