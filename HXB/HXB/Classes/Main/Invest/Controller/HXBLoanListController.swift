@@ -20,6 +20,7 @@ class HXBLoanListController: HXBViewController {
         viewModel = HXBLoanListViewModel(view)
         setUI()
         viewModel.getData(isNew: true)
+        reactive_bind()
     }
 
     // MARK: - Public Property
@@ -35,8 +36,8 @@ extension HXBLoanListController {
         view.backgroundColor = UIColor.orange
         tableView.dataSource = self
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "id")
-        
+        tableView.register(HXBLoanListCell.self, forCellReuseIdentifier: HXBLoanListCell.identifier)
+        tableView.rowHeight = HXBLoanListCell.cellHeight
         view.addSubview(tableView)
         
         tableView.snp.makeConstraints { maker in
@@ -60,9 +61,8 @@ extension HXBLoanListController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "id", for: indexPath)
-        cell.backgroundColor = UIColor.cyan
-        cell.textLabel?.text = viewModel.dataSource[indexPath.row].title
+        let cell = tableView.dequeueReusableCell(withIdentifier: HXBLoanListCell.identifier, for: indexPath) as! HXBLoanListCell
+        cell.loanListModel = viewModel.dataSource[indexPath.row]
         return cell
     }
 }

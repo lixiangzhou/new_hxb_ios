@@ -30,8 +30,8 @@ extension hxb {
         /// 用于色块之间的间隔底色填充 【f5f5f9】
         static let view2ViewFill = UIColor(stringHexValue: "f5f5f9")!
         
-        /// 用于分割线 【dddddd】
-        static let sepLine = UIColor(stringHexValue: "dddddd")!
+        /// 用于分割线 【ececec】
+        static let sepLine = UIColor(stringHexValue: "ececec")!
         
         /// 背景色 【f5f5f9】
         static let background = UIColor(stringHexValue: "f5f5f9")!

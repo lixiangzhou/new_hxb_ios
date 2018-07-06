@@ -57,6 +57,9 @@
 		8D5EDF8520EF1AC90036E156 /* HXBListLoanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5EDF8420EF1AC90036E156 /* HXBListLoanModel.swift */; };
 		8D5EDF8720EF1B560036E156 /* HXBListTransferModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5EDF8620EF1B560036E156 /* HXBListTransferModel.swift */; };
 		8D5EDF8D20EF4E390036E156 /* HXBReactiveProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5EDF8C20EF4E390036E156 /* HXBReactiveProtocol.swift */; };
+		8D5EDF8F20EF506F0036E156 /* HXBPlanListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5EDF8E20EF506F0036E156 /* HXBPlanListCell.swift */; };
+		8D5EDF9120EF507C0036E156 /* HXBLoanListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5EDF9020EF507C0036E156 /* HXBLoanListCell.swift */; };
+		8D5EDF9320EF508C0036E156 /* HXBTransferListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5EDF9220EF508C0036E156 /* HXBTransferListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +117,9 @@
 		8D5EDF8420EF1AC90036E156 /* HXBListLoanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBListLoanModel.swift; sourceTree = "<group>"; };
 		8D5EDF8620EF1B560036E156 /* HXBListTransferModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBListTransferModel.swift; sourceTree = "<group>"; };
 		8D5EDF8C20EF4E390036E156 /* HXBReactiveProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBReactiveProtocol.swift; sourceTree = "<group>"; };
+		8D5EDF8E20EF506F0036E156 /* HXBPlanListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBPlanListCell.swift; sourceTree = "<group>"; };
+		8D5EDF9020EF507C0036E156 /* HXBLoanListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBLoanListCell.swift; sourceTree = "<group>"; };
+		8D5EDF9220EF508C0036E156 /* HXBTransferListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBTransferListCell.swift; sourceTree = "<group>"; };
 		D700915060D738EFF63636CD /* Pods-HXB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HXB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HXB/Pods-HXB.debug.xcconfig"; sourceTree = "<group>"; };
 		FE6381BBAB3DDF96B52EBF4D /* Pods_HXB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HXB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -434,6 +440,9 @@
 		8D57AFA220E608D800CA3F5A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8D5EDF8E20EF506F0036E156 /* HXBPlanListCell.swift */,
+				8D5EDF9020EF507C0036E156 /* HXBLoanListCell.swift */,
+				8D5EDF9220EF508C0036E156 /* HXBTransferListCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -606,6 +615,7 @@
 				8D57AFB920E6202800CA3F5A /* HXBFont.swift in Sources */,
 				8D5EDF8320EF0CCA0036E156 /* HXBListPlanModel.swift in Sources */,
 				8D5EDF7720EE1C310036E156 /* HXBLoanListController.swift in Sources */,
+				8D5EDF9320EF508C0036E156 /* HXBTransferListCell.swift in Sources */,
 				8D5EDF7920EE1C6E0036E156 /* HXBTransferListController.swift in Sources */,
 				8D57AF5D20E5CA2900CA3F5A /* AppDelegate.swift in Sources */,
 				8D57AF8F20E6084500CA3F5A /* ActiveBuilder.swift in Sources */,
@@ -613,6 +623,7 @@
 				8D57AF9320E6084500CA3F5A /* StringTrimExtension.swift in Sources */,
 				8D5EDF8D20EF4E390036E156 /* HXBReactiveProtocol.swift in Sources */,
 				8D57AF8420E6079300CA3F5A /* HXBViewModel.swift in Sources */,
+				8D5EDF8F20EF506F0036E156 /* HXBPlanListCell.swift in Sources */,
 				8D57AF9020E6084500CA3F5A /* ActiveLabel.swift in Sources */,
 				8D57AFD320E6362F00CA3F5A /* UIImage+HXB.swift in Sources */,
 				8D57AFA720E6090C00CA3F5A /* HXBInvestController.swift in Sources */,
@@ -625,6 +636,7 @@
 				8D57AF7C20E6073A00CA3F5A /* HXBViewController.swift in Sources */,
 				8D57AFCB20E633DD00CA3F5A /* HXBHUD.swift in Sources */,
 				8D57AF8220E6078100CA3F5A /* HXBModel.swift in Sources */,
+				8D5EDF9120EF507C0036E156 /* HXBLoanListCell.swift in Sources */,
 				8D57AFBB20E6204100CA3F5A /* HXBConfig.swift in Sources */,
 				8D57AFC320E6282300CA3F5A /* HXBCode.swift in Sources */,
 				8D57AF9120E6084500CA3F5A /* ActiveType.swift in Sources */,

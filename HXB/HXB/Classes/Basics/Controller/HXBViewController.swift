@@ -14,7 +14,6 @@ class HXBViewController: UIViewController {
         super.viewDidLoad()
         
         setUI()
-        reactive_bind()
     }
 
     override func viewWillAppear(_ animated: Bool) {
