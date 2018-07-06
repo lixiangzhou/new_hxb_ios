@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ReactiveSwift
 
 /// 散标列表
 class HXBLoanListController: HXBViewController {
@@ -18,6 +19,7 @@ class HXBLoanListController: HXBViewController {
 
         viewModel = HXBLoanListViewModel(view)
         setUI()
+        viewModel.getData(isNew: true)
     }
 
     // MARK: - Public Property
@@ -43,52 +45,26 @@ extension HXBLoanListController {
             maker.bottom.equalToSuperview().offset(view.safeAreaInsets.bottom)
         }
     }
-}
-
-// MARK: - Action
-extension HXBLoanListController {
     
-}
-
-// MARK: - Network
-extension HXBLoanListController {
-    
+    override func reactive_bind() {
+        tableView.reactive.reloadData <~ viewModel.reloadDataSignal
+    }
 }
 
 // MARK: - Delegate Internal
 
 // MARK: -
 extension HXBLoanListController: UITableViewDataSource {
-    
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 100
+        return viewModel.dataSource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "id", for: indexPath)
         cell.backgroundColor = UIColor.cyan
-        cell.textLabel?.text = "item + \(indexPath.row)"
+        cell.textLabel?.text = viewModel.dataSource[indexPath.row].title
         return cell
     }
 }
 
-// MARK: - Delegate External
-
-// MARK: -
-
-// MARK: - Helper
-extension HXBLoanListController {
-    
-}
-
-// MARK: - Other
-extension HXBLoanListController {
-    
-}
-
-// MARK: - Public
-extension HXBLoanListController {
-    
-}
 

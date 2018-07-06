@@ -53,6 +53,13 @@ class HXBRequestApi {
     
     /// 响应结果的序列号方式
     var responseSerializeType = HXBResponseSerializeType.json
+    
+    // MARK: - HUD
+    weak var hudDelegate: HXBHUDShowDelegate?
+    /// Progress 显示容器类型
+    var hudProgressType: HXBHudContainerType = .view
+    /// Toast 显示容器类型
+    var hudToastType: HXBHudContainerType = .view
 }
 
 extension HXBRequestApi {
@@ -66,19 +73,19 @@ extension HXBRequestApi {
     
     /// 显示 Progress
     func showProgress() {
-        
+        hudDelegate?.showProgress(type: hudProgressType)
     }
     
     /// 隐藏 Progress
     func hideProgress() {
-        
+        hudDelegate?.hideProgress(type: hudProgressType)
     }
     
     /// 显示 Toast
     ///
     /// - Parameter toast: toast
     func show(toast: String) {
-        
+        hudDelegate?.show(toast: toast, type: hudToastType)
     }
 }
 

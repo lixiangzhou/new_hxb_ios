@@ -56,6 +56,7 @@
 		8D5EDF8320EF0CCA0036E156 /* HXBListPlanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5EDF8220EF0CCA0036E156 /* HXBListPlanModel.swift */; };
 		8D5EDF8520EF1AC90036E156 /* HXBListLoanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5EDF8420EF1AC90036E156 /* HXBListLoanModel.swift */; };
 		8D5EDF8720EF1B560036E156 /* HXBListTransferModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5EDF8620EF1B560036E156 /* HXBListTransferModel.swift */; };
+		8D5EDF8D20EF4E390036E156 /* HXBReactiveProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5EDF8C20EF4E390036E156 /* HXBReactiveProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +113,7 @@
 		8D5EDF8220EF0CCA0036E156 /* HXBListPlanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBListPlanModel.swift; sourceTree = "<group>"; };
 		8D5EDF8420EF1AC90036E156 /* HXBListLoanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBListLoanModel.swift; sourceTree = "<group>"; };
 		8D5EDF8620EF1B560036E156 /* HXBListTransferModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBListTransferModel.swift; sourceTree = "<group>"; };
+		8D5EDF8C20EF4E390036E156 /* HXBReactiveProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBReactiveProtocol.swift; sourceTree = "<group>"; };
 		D700915060D738EFF63636CD /* Pods-HXB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HXB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HXB/Pods-HXB.debug.xcconfig"; sourceTree = "<group>"; };
 		FE6381BBAB3DDF96B52EBF4D /* Pods_HXB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HXB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -276,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				8D57AF8720E607EC00CA3F5A /* HXBShakeConfigUrlView.swift */,
+				8D5EDF8C20EF4E390036E156 /* HXBReactiveProtocol.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -608,6 +611,7 @@
 				8D57AF8F20E6084500CA3F5A /* ActiveBuilder.swift in Sources */,
 				8D57AF8020E6076F00CA3F5A /* HXBNavigationController.swift in Sources */,
 				8D57AF9320E6084500CA3F5A /* StringTrimExtension.swift in Sources */,
+				8D5EDF8D20EF4E390036E156 /* HXBReactiveProtocol.swift in Sources */,
 				8D57AF8420E6079300CA3F5A /* HXBViewModel.swift in Sources */,
 				8D57AF9020E6084500CA3F5A /* ActiveLabel.swift in Sources */,
 				8D57AFD320E6362F00CA3F5A /* UIImage+HXB.swift in Sources */,

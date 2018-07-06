@@ -14,6 +14,7 @@ class HXBViewController: UIViewController {
         super.viewDidLoad()
         
         setUI()
+        reactive_bind()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -108,4 +109,8 @@ extension HXBViewController {
         case clear
         case normal
     }
+}
+
+extension HXBViewController: HXBReactiveProtocol {
+    @objc func reactive_bind() { }
 }

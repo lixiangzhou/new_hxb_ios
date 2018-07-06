@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class HXBViewModel: NSObject {
     weak var hudView: UIView?
@@ -17,6 +18,30 @@ class HXBViewModel: NSObject {
         self.hudView = hudView
     }
 }
+
+extension HXBViewModel {
+    func requestResult(_ isSuccess: Bool, _ requestApi: HXBRequestApi, errorToast: String? = hxb.string.getdataErrorString, showToast: Bool = true) -> Bool {
+        if isSuccess {
+            let json = JSON(requestApi.responseObject!)
+            if json.isSuccess {
+                return true
+            } else {
+                show(toast: json.message, canShow: showToast, requestApi: requestApi)
+                return false
+            }
+        } else {
+            show(toast: errorToast, canShow: showToast, requestApi: requestApi)
+            return false
+        }
+    }
+    
+    private func show(toast: String?, canShow: Bool, requestApi: HXBRequestApi) {
+        if canShow && toast != nil {
+            requestApi.show(toast: toast!)
+        }
+    }
+}
+
 extension HXBViewModel: HXBHUDShowDelegate {
     func showProgress(type: HXBHudContainerType) {
         hudProgress(type: type) { toView in

@@ -8,6 +8,12 @@
 
 import UIKit
 
+enum HXBFooterRefreshType {
+    case nomoreData
+    case moreData
+    case none
+}
+
 class HXBTableView: UITableView {
     override init(frame: CGRect, style: UITableViewStyle) {
         super.init(frame: frame, style: style)

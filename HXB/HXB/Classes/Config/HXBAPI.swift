@@ -15,5 +15,9 @@ extension hxb {
         
         /// 计划列表
         static let plan = "/plan"
+        /// 散标列表
+        static let loan = "/loan"
+        /// 债权转让
+        static let transfer = "/transfer"
     }
 }
