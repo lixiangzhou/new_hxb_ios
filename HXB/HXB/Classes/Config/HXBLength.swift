@@ -60,8 +60,8 @@ extension hxb {
         /// 底部额外高度 【iPhone X：34，其他：0】
         static let bottomAddtionHeight: CGFloat = isIPhoneX ? 34 : 0
         
-        /// tabbar 高度 【49】
-        static let tabbarHeight: CGFloat = 49
+        /// tabbar 高度 【iPhone X: 83，其他：49】
+        static let tabbarHeight: CGFloat = isIPhoneX ? 83 : 49
         
         /// 手机号长度 【11】
         static let mobileLength = 11

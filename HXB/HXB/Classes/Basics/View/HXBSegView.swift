@@ -73,7 +73,11 @@ class HXBSegView: UIView {
         }
     }
     
-    var selectedIndex = 0
+    var selectedIndex = 0 {
+        didSet {
+            itemClick(sender: itemViews[selectedIndex])
+        }
+    }
     
     // MARK: Item 间的分割线
     var sepLineColor: UIColor? {
@@ -149,7 +153,7 @@ class HXBSegView: UIView {
     var animateLineAnimateDuration: TimeInterval = 0.25
     let animateLine = UIView()
     // MARK:
-    var itemSelect: ((Int, String) -> Void)?
+    var itemSelect: ((Int, String) -> ())?
     
     // MARK: - Private Property
     fileprivate var itemViews = [UIButton]()

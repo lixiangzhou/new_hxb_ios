@@ -46,6 +46,13 @@
 		8D57AFD320E6362F00CA3F5A /* UIImage+HXB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AFD220E6362F00CA3F5A /* UIImage+HXB.swift */; };
 		8D57AFD520E6363600CA3F5A /* UILabel+HXB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AFD420E6363600CA3F5A /* UILabel+HXB.swift */; };
 		8D5EDF7120EDFC680036E156 /* HXBSegView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5EDF7020EDFC680036E156 /* HXBSegView.swift */; };
+		8D5EDF7520EE1C230036E156 /* HXBPlanListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5EDF7420EE1C230036E156 /* HXBPlanListController.swift */; };
+		8D5EDF7720EE1C310036E156 /* HXBLoanListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5EDF7620EE1C310036E156 /* HXBLoanListController.swift */; };
+		8D5EDF7920EE1C6E0036E156 /* HXBTransferListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5EDF7820EE1C6E0036E156 /* HXBTransferListController.swift */; };
+		8D5EDF7B20EE2B320036E156 /* HXBTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5EDF7A20EE2B320036E156 /* HXBTableView.swift */; };
+		8D5EDF7D20EF09170036E156 /* HXBPlanListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5EDF7C20EF09170036E156 /* HXBPlanListViewModel.swift */; };
+		8D5EDF7F20EF092F0036E156 /* HXBLoanListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5EDF7E20EF092F0036E156 /* HXBLoanListViewModel.swift */; };
+		8D5EDF8120EF093D0036E156 /* HXBTransferListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5EDF8020EF093D0036E156 /* HXBTransferListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +99,13 @@
 		8D57AFD220E6362F00CA3F5A /* UIImage+HXB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+HXB.swift"; sourceTree = "<group>"; };
 		8D57AFD420E6363600CA3F5A /* UILabel+HXB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+HXB.swift"; sourceTree = "<group>"; };
 		8D5EDF7020EDFC680036E156 /* HXBSegView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBSegView.swift; sourceTree = "<group>"; };
+		8D5EDF7420EE1C230036E156 /* HXBPlanListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBPlanListController.swift; sourceTree = "<group>"; };
+		8D5EDF7620EE1C310036E156 /* HXBLoanListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBLoanListController.swift; sourceTree = "<group>"; };
+		8D5EDF7820EE1C6E0036E156 /* HXBTransferListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBTransferListController.swift; sourceTree = "<group>"; };
+		8D5EDF7A20EE2B320036E156 /* HXBTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBTableView.swift; sourceTree = "<group>"; };
+		8D5EDF7C20EF09170036E156 /* HXBPlanListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBPlanListViewModel.swift; sourceTree = "<group>"; };
+		8D5EDF7E20EF092F0036E156 /* HXBLoanListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBLoanListViewModel.swift; sourceTree = "<group>"; };
+		8D5EDF8020EF093D0036E156 /* HXBTransferListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBTransferListViewModel.swift; sourceTree = "<group>"; };
 		D700915060D738EFF63636CD /* Pods-HXB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HXB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HXB/Pods-HXB.debug.xcconfig"; sourceTree = "<group>"; };
 		FE6381BBAB3DDF96B52EBF4D /* Pods_HXB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HXB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -203,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				8D5EDF7020EDFC680036E156 /* HXBSegView.swift */,
+				8D5EDF7A20EE2B320036E156 /* HXBTableView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -390,6 +405,9 @@
 			isa = PBXGroup;
 			children = (
 				8D57AFA620E6090C00CA3F5A /* HXBInvestController.swift */,
+				8D5EDF7420EE1C230036E156 /* HXBPlanListController.swift */,
+				8D5EDF7620EE1C310036E156 /* HXBLoanListController.swift */,
+				8D5EDF7820EE1C6E0036E156 /* HXBTransferListController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -411,6 +429,9 @@
 		8D57AFA320E608D800CA3F5A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8D5EDF7C20EF09170036E156 /* HXBPlanListViewModel.swift */,
+				8D5EDF7E20EF092F0036E156 /* HXBLoanListViewModel.swift */,
+				8D5EDF8020EF093D0036E156 /* HXBTransferListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -551,11 +572,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D5EDF8120EF093D0036E156 /* HXBTransferListViewModel.swift in Sources */,
 				8D57AF8820E607EC00CA3F5A /* HXBShakeConfigUrlView.swift in Sources */,
 				8D57AFC120E6281800CA3F5A /* HXBError.swift in Sources */,
 				8D57AFB320E61FE100CA3F5A /* HXBString.swift in Sources */,
 				8D57AFBF20E626FC00CA3F5A /* HXBKeychain.swift in Sources */,
 				8D57AFC720E62A6F00CA3F5A /* JSON+HXB.swift in Sources */,
+				8D5EDF7F20EF092F0036E156 /* HXBLoanListViewModel.swift in Sources */,
 				8D57AFA920E6092200CA3F5A /* HXBMineController.swift in Sources */,
 				8D57AFAB20E60C3F00CA3F5A /* HXBRequestApi.swift in Sources */,
 				8D57AFD520E6363600CA3F5A /* UILabel+HXB.swift in Sources */,
@@ -567,6 +590,8 @@
 				8D5EDF7120EDFC680036E156 /* HXBSegView.swift in Sources */,
 				8D57AFAF20E60C7A00CA3F5A /* HXBNetworkManager.swift in Sources */,
 				8D57AFB920E6202800CA3F5A /* HXBFont.swift in Sources */,
+				8D5EDF7720EE1C310036E156 /* HXBLoanListController.swift in Sources */,
+				8D5EDF7920EE1C6E0036E156 /* HXBTransferListController.swift in Sources */,
 				8D57AF5D20E5CA2900CA3F5A /* AppDelegate.swift in Sources */,
 				8D57AF8F20E6084500CA3F5A /* ActiveBuilder.swift in Sources */,
 				8D57AF8020E6076F00CA3F5A /* HXBNavigationController.swift in Sources */,
@@ -577,6 +602,7 @@
 				8D57AFA720E6090C00CA3F5A /* HXBInvestController.swift in Sources */,
 				8D57AFCD20E6361300CA3F5A /* UIButton+HXB.swift in Sources */,
 				8D39140820E640AE0005AF9E /* HXBMineViewModel.swift in Sources */,
+				8D5EDF7D20EF09170036E156 /* HXBPlanListViewModel.swift in Sources */,
 				8D57AF9220E6084500CA3F5A /* RegexParser.swift in Sources */,
 				8D57AFAD20E60C6C00CA3F5A /* HXBAPI.swift in Sources */,
 				8D57AFBD20E6204B00CA3F5A /* HXBNet.swift in Sources */,
@@ -587,7 +613,9 @@
 				8D57AFC320E6282300CA3F5A /* HXBCode.swift in Sources */,
 				8D57AF9120E6084500CA3F5A /* ActiveType.swift in Sources */,
 				8D57AFC920E62EDB00CA3F5A /* HXBSignal.swift in Sources */,
+				8D5EDF7B20EE2B320036E156 /* HXBTableView.swift in Sources */,
 				8D57AFA520E608F700CA3F5A /* HXBHomeController.swift in Sources */,
+				8D5EDF7520EE1C230036E156 /* HXBPlanListController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
