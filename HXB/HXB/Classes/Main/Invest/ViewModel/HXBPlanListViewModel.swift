@@ -7,7 +7,15 @@
 //
 
 import UIKit
+import ReactiveSwift
+import Result
 
 class HXBPlanListViewModel: HXBViewModel {
-
+    
+    var planListProducer: SignalProducer<[HXBListPlanModel], NoError>!
+    
+    override init() {
+        super.init()
+        
+    }
 }

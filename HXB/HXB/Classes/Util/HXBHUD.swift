@@ -8,6 +8,18 @@
 
 import XZLib
 
+enum HXBHudContainerType {
+    case window     /// 显示在window上
+    case view       /// 显示在view上
+    case none       /// 不显示
+}
+
+protocol HXBHUDShowDelegate: NSObjectProtocol {
+    func showProgress(type: HXBHudContainerType)
+    func hideProgress(type: HXBHudContainerType)
+    func show(toast: String, type: HXBHudContainerType)
+}
+
 struct HXBHUD {
     static func show(toast: String, in view: UIView = UIApplication.shared.keyWindow!) {
         ZZHud.show(message: toast,

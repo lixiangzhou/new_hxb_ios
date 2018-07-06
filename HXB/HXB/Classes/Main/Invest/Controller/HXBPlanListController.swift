@@ -16,17 +16,15 @@ class HXBPlanListController: HXBViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        viewModel = HXBPlanListViewModel(view)
         setUI()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
     }
 
     // MARK: - Public Property
     
     // MARK: - Private Property
     fileprivate var tableView = HXBTableView(style: .plain, dataSource: nil, delegate: nil)
+    fileprivate var viewModel: HXBPlanListViewModel!
 }
 
 // MARK: - UI

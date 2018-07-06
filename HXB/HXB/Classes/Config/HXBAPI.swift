@@ -10,7 +10,10 @@ import UIKit
 
 extension hxb {
     struct api {        
-        /// 获取token 【/token】
+        /// 获取token
         static let token = "/token"
+        
+        /// 计划列表
+        static let plan = "/plan"
     }
 }

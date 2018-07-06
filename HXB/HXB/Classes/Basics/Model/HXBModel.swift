@@ -7,7 +7,8 @@
 //
 
 import UIKit
+import HandyJSON
 
-class HXBModel: NSObject {
-
+class HXBModel: NSObject, HandyJSON {
+    override required init() { }
 }
