@@ -8,6 +8,7 @@
 
 import UIKit
 import ReactiveSwift
+import XZLib
 
 /// 散标列表
 class HXBLoanListController: HXBViewController {
@@ -45,10 +46,27 @@ extension HXBLoanListController {
             maker.left.right.equalToSuperview()
             maker.bottom.equalToSuperview().offset(view.safeAreaInsets.bottom)
         }
+        
+        tableView.header = HXBRefreshHeader(target: self, action: #selector(getNewData))
+        tableView.footer = HXBRefreshFooter(target: self, action: #selector(getMoreData))
     }
     
     override func reactive_bind() {
-        tableView.reactive.reloadData <~ viewModel.reloadDataSignal
+        viewModel.reloadDataSignal.observeValues { [weak self] in
+            self?.tableView.reloadData()
+            self?.tableView.header?.endRefreshing()
+            self?.tableView.footer?.endRefreshing()
+        }
+    }
+}
+
+extension HXBLoanListController {
+    @objc fileprivate func getNewData() {
+        viewModel.getData(isNew: true)
+    }
+    
+    @objc fileprivate func getMoreData() {
+        viewModel.getData(isNew: false)
     }
 }
 

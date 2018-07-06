@@ -60,6 +60,8 @@
 		8D5EDF8F20EF506F0036E156 /* HXBPlanListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5EDF8E20EF506F0036E156 /* HXBPlanListCell.swift */; };
 		8D5EDF9120EF507C0036E156 /* HXBLoanListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5EDF9020EF507C0036E156 /* HXBLoanListCell.swift */; };
 		8D5EDF9320EF508C0036E156 /* HXBTransferListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5EDF9220EF508C0036E156 /* HXBTransferListCell.swift */; };
+		8D5EDF9520EF6B020036E156 /* HXBRefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5EDF9420EF6B020036E156 /* HXBRefreshHeader.swift */; };
+		8D7F47F320EF7EDD00F22312 /* HXBRefreshFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7F47F220EF7EDD00F22312 /* HXBRefreshFooter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -120,6 +122,8 @@
 		8D5EDF8E20EF506F0036E156 /* HXBPlanListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBPlanListCell.swift; sourceTree = "<group>"; };
 		8D5EDF9020EF507C0036E156 /* HXBLoanListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBLoanListCell.swift; sourceTree = "<group>"; };
 		8D5EDF9220EF508C0036E156 /* HXBTransferListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBTransferListCell.swift; sourceTree = "<group>"; };
+		8D5EDF9420EF6B020036E156 /* HXBRefreshHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBRefreshHeader.swift; sourceTree = "<group>"; };
+		8D7F47F220EF7EDD00F22312 /* HXBRefreshFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBRefreshFooter.swift; sourceTree = "<group>"; };
 		D700915060D738EFF63636CD /* Pods-HXB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HXB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HXB/Pods-HXB.debug.xcconfig"; sourceTree = "<group>"; };
 		FE6381BBAB3DDF96B52EBF4D /* Pods_HXB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HXB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -232,6 +236,8 @@
 			children = (
 				8D5EDF7020EDFC680036E156 /* HXBSegView.swift */,
 				8D5EDF7A20EE2B320036E156 /* HXBTableView.swift */,
+				8D5EDF9420EF6B020036E156 /* HXBRefreshHeader.swift */,
+				8D7F47F220EF7EDD00F22312 /* HXBRefreshFooter.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -608,6 +614,7 @@
 				8D57AF7E20E6075200CA3F5A /* HXBTabBarController.swift in Sources */,
 				8D57AFB520E61FEA00CA3F5A /* HXBColor.swift in Sources */,
 				8D5EDF8720EF1B560036E156 /* HXBListTransferModel.swift in Sources */,
+				8D5EDF9520EF6B020036E156 /* HXBRefreshHeader.swift in Sources */,
 				8D57AFCF20E6361F00CA3F5A /* UIImageView+HXB.swift in Sources */,
 				8D57AFB720E6201E00CA3F5A /* HXBLength.swift in Sources */,
 				8D5EDF7120EDFC680036E156 /* HXBSegView.swift in Sources */,
@@ -624,6 +631,7 @@
 				8D5EDF8D20EF4E390036E156 /* HXBReactiveProtocol.swift in Sources */,
 				8D57AF8420E6079300CA3F5A /* HXBViewModel.swift in Sources */,
 				8D5EDF8F20EF506F0036E156 /* HXBPlanListCell.swift in Sources */,
+				8D7F47F320EF7EDD00F22312 /* HXBRefreshFooter.swift in Sources */,
 				8D57AF9020E6084500CA3F5A /* ActiveLabel.swift in Sources */,
 				8D57AFD320E6362F00CA3F5A /* UIImage+HXB.swift in Sources */,
 				8D57AFA720E6090C00CA3F5A /* HXBInvestController.swift in Sources */,
