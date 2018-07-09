@@ -40,6 +40,7 @@ class HXBRefreshHeader: ZZRefreshHeader {
     }
     
     override func setupUI() {
+        style = .top
         let contentView = UIView()
         addSubview(contentView)
         

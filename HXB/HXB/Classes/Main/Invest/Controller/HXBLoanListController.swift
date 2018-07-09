@@ -48,7 +48,7 @@ extension HXBLoanListController {
         }
         
         tableView.header = HXBRefreshHeader(target: self, action: #selector(getNewData))
-        tableView.footer = HXBRefreshFooter(target: self, action: #selector(getMoreData))
+        
     }
     
     override func reactive_bind() {
@@ -56,6 +56,18 @@ extension HXBLoanListController {
             self?.tableView.reloadData()
             self?.tableView.header?.endRefreshing()
             self?.tableView.footer?.endRefreshing()
+            
+            if self?.viewModel.footerType == .moreData {
+                if !(self?.tableView.footer != nil && self!.tableView.footer!.loadNoMoreData == false) {
+                    self?.tableView.footer = HXBRefreshFooter(target: self, action: #selector(HXBLoanListController.getMoreData))
+                }
+            } else if self?.viewModel.footerType == .nomoreData {
+                if !(self?.tableView.footer != nil && self!.tableView.footer!.loadNoMoreData == true) {
+                    self?.tableView.footer = HXBRefreshNoMoreDataFooter()
+                }
+            } else if self?.viewModel.footerType == .none {
+                self?.tableView.footer = nil
+            }
         }
     }
 }

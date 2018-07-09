@@ -40,6 +40,19 @@ class HXBLoanListViewModel: HXBViewModel {
             }.startWithValues { isSuccess, requestApi in
                 if self.requestResult(isSuccess, requestApi) {
                     let json = JSON(requestApi.responseObject!)
+                    
+                    self.totalCount = json["data"]["totalCount"].intValue
+                    self.pageSize = json["data"]["pageSize"].intValue
+                    self.pageNumber = json["data"]["pageNumber"].intValue
+                    
+                    if self.pageSize > self.totalCount {
+                        self.footerType = .none
+                    } else if self.pageSize * self.pageNumber > self.totalCount {
+                        self.footerType = .nomoreData
+                    } else {
+                        self.footerType = .moreData
+                    }
+                    
                     if let dataList = json["data"]["dataList"].arrayObject,
                         let modelList = [HXBListLoanModel].deserialize(from: dataList) as? [HXBListLoanModel] {
                         if isNew {
@@ -48,18 +61,6 @@ class HXBLoanListViewModel: HXBViewModel {
                             self.dataSource.append(contentsOf: modelList)
                         }
                         self.reloadDataObserver.send(value: ())
-                    }
-                    
-                    self.totalCount = json["data"]["totalCount"].intValue
-                    self.pageSize = json["data"]["pageSize"].intValue
-                    self.pageNumber = json["data"]["pageNumber"].intValue
-                    
-                    if self.pageSize < self.totalCount {
-                        self.footerType = .none
-                    } else if self.pageSize * self.pageNumber > self.totalCount {
-                        self.footerType = .nomoreData
-                    } else {
-                        self.footerType = .moreData
                     }
                 }
         }

@@ -74,3 +74,17 @@ class HXBRefreshFooter: ZZRefreshFooter {
     private let iconView = UIImageView(named: "refresh_icon")
     private let indicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
 }
+
+class HXBRefreshNoMoreDataFooter: ZZRefreshFooter {
+    override func setupUI() {
+        loadNoMoreData = true
+        
+        addSubview(titleLabel)
+        
+        titleLabel.snp.makeConstraints { maker in
+            maker.center.equalToSuperview()
+        }
+    }
+    
+    private let titleLabel = UILabel(text: "没有更多的数据了...", font: hxb.font.f12, textColor: hxb.color.light)
+}
