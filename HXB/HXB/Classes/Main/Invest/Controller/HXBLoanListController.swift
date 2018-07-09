@@ -92,7 +92,7 @@ extension HXBLoanListController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: HXBLoanListCell.identifier, for: indexPath) as! HXBLoanListCell
-        cell.loanListModel = viewModel.dataSource[indexPath.row]
+        cell.listLoanModel = viewModel.dataSource[indexPath.row]
         return cell
     }
 }

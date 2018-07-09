@@ -26,16 +26,16 @@ class HXBLoanListCell: UITableViewCell {
     static let identifier = "HXBLoanListCellIdentifier"
     static let cellHeight: CGFloat = 110
     
-    var loanListModel: HXBListLoanModel! {
+    var listLoanModel: HXBListLoanModel! {
         didSet {
-            nameLabel.text = loanListModel.title
+            nameLabel.text = listLoanModel.title
             
             leftMonthLabel.text = "剩余金额：\(1000.00)"
             
-            interestLabel.text = "\(loanListModel.interest)%"
+            interestLabel.text = "\(listLoanModel.interest)%"
             
             // 剩余期限
-            let leftMonths = NSMutableAttributedString(string: loanListModel.months)
+            let leftMonths = NSMutableAttributedString(string: listLoanModel.months)
             leftMonths.append(NSAttributedString(string: "个月", attributes: [NSAttributedStringKey.font: hxb.font.f12]))
             leftMonthLabel.attributedText = leftMonths
             
@@ -46,7 +46,7 @@ class HXBLoanListCell: UITableViewCell {
     
     // MARK: - Private Property
     fileprivate let nameLabel = UILabel(text: "", font: hxb.font.f14, textColor: hxb.color.important)
-    fileprivate let leftMoneyLabel = UILabel(text: "", font: hxb.font.f14, textColor: UIColor(stringHexValue: "D4AD72")!)
+    fileprivate let leftMoneyLabel = UILabel(text: "", font: hxb.font.f12, textColor: UIColor(stringHexValue: "D4AD72")!)
     fileprivate let interestLabel = UILabel(text: "", font: hxb.font.f25, textColor: hxb.color.theme)
     fileprivate let interestDescLabel = UILabel(text: "年利率", font: hxb.font.f12, textColor: UIColor(stringHexValue: "9295A2")!)
     fileprivate let leftMonthLabel = UILabel(text: "", font: hxb.font.f17, textColor: hxb.color.important)
@@ -120,7 +120,7 @@ extension HXBLoanListCell {
 extension HXBLoanListCell {
     fileprivate func setStatus() {
         
-        if loanListModel.status == "OPEN" {
+        if listLoanModel.status == "OPEN" {
             statusBtn.setTitleColor(.white, for: .normal)
             statusBtn.setBackgroundImage(UIImage("bt_bg_nor"), for: .normal)
         } else {
@@ -129,7 +129,7 @@ extension HXBLoanListCell {
         }
         
         var statusTxt = ""
-        switch loanListModel.status {
+        switch listLoanModel.status {
         case "OPEN":
             statusTxt = "立即投标"
         case "READY", "FIRST_READY":
