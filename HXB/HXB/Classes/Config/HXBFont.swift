@@ -38,6 +38,8 @@ extension hxb {
         /// 用于协调等辅助性文字 【12】
         static let f12 = UIFont(name: fontName, size: 12)!
         
+        static let f11 = UIFont(name: fontName, size: 11)!
+        
         /// 用于tabbar 【10】
         static let f10 = UIFont(name: fontName, size: 10)!
     }

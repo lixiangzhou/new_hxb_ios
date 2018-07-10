@@ -67,7 +67,7 @@ class HXBNetworkManager {
                         requestApi.httpResponse = responseData.response
                         
                         if responseData.result.isSuccess {
-                            log.info(responseData.result.value!)
+//                            log.info(responseData.result.value!)
                             requestApi.responseObject = responseData.result.value as? HXBResponseObject
                             
                             self!.successProcess(requestApi: requestApi, withObserver: observer)
@@ -87,7 +87,7 @@ class HXBNetworkManager {
                         requestApi.httpResponse = responseData.response
                         
                         if responseData.result.isSuccess {
-                            log.info(responseData.result.value!)
+//                            log.info(responseData.result.value!)
                             requestApi.responseData = responseData.result.value
                             
                             self!.successProcess(requestApi: requestApi, withObserver: observer)

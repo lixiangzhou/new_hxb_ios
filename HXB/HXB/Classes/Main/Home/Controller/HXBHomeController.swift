@@ -22,9 +22,13 @@ class HXBHomeController: HXBViewController {
 extension HXBHomeController {
     fileprivate func setUI() {
         backItemStyle = .none
+        navigationBarBackgroundStyle = .white
         
-        let iv = UIImageView(frame: CGRect(x: 20, y: 90, width: 100, height: 100))
+        let titleLabel = UILabel(text: "红小宝", font: hxb.font.f19, textColor: hxb.color.important)
+        let titleItem = UIBarButtonItem(customView: titleLabel)
+        navigationItem.leftBarButtonItem = titleItem
         
-        view.addSubview(iv)
+        
+        
     }
 }

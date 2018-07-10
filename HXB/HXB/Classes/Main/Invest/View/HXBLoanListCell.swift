@@ -48,9 +48,9 @@ class HXBLoanListCell: UITableViewCell {
     fileprivate let nameLabel = UILabel(text: "", font: hxb.font.f14, textColor: hxb.color.important)
     fileprivate let leftMoneyLabel = UILabel(text: "", font: hxb.font.f12, textColor: UIColor(stringHexValue: "D4AD72")!)
     fileprivate let interestLabel = UILabel(text: "", font: hxb.font.f25, textColor: hxb.color.theme)
-    fileprivate let interestDescLabel = UILabel(text: "年利率", font: hxb.font.f12, textColor: UIColor(stringHexValue: "9295A2")!)
+    fileprivate let interestDescLabel = UILabel(text: "年利率", font: hxb.font.f12, textColor: hxb.color.disableTextColor)
     fileprivate let leftMonthLabel = UILabel(text: "", font: hxb.font.f17, textColor: hxb.color.important)
-    fileprivate let leftMonthDescLabel = UILabel(text: "剩余期限", font: hxb.font.f12, textColor: UIColor(stringHexValue: "9295A2")!)
+    fileprivate let leftMonthDescLabel = UILabel(text: "剩余期限", font: hxb.font.f12, textColor: hxb.color.disableTextColor)
     fileprivate let statusBtn = UIButton(font: hxb.font.f14)
     fileprivate let bottomLine = UIView()
 }
@@ -124,7 +124,7 @@ extension HXBLoanListCell {
             statusBtn.setTitleColor(.white, for: .normal)
             statusBtn.setBackgroundImage(UIImage("bt_bg_nor"), for: .normal)
         } else {
-            statusBtn.setTitleColor(UIColor(stringHexValue: "9295A2"), for: .normal)
+            statusBtn.setTitleColor(hxb.color.disableTextColor, for: .normal)
             statusBtn.setBackgroundImage(UIImage("bt_bg_dis_gray"), for: .normal)
         }
         

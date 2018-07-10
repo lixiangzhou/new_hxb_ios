@@ -15,11 +15,13 @@ class HXBPlanListController: HXBViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         viewModel = HXBPlanListViewModel(view)
         setUI()
+        viewModel.getData(isNew: true)
+        reactive_bind()
     }
-
+    
     // MARK: - Public Property
     
     // MARK: - Private Property
@@ -30,12 +32,11 @@ class HXBPlanListController: HXBViewController {
 // MARK: - UI
 extension HXBPlanListController {
     fileprivate func setUI() {
-        view.backgroundColor = UIColor.blue
-        
+        view.backgroundColor = UIColor.orange
         tableView.dataSource = self
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "id")
-        
+        tableView.register(HXBPlanListCell.self, forCellReuseIdentifier: HXBPlanListCell.identifier)
+        tableView.estimatedRowHeight = 130
         view.addSubview(tableView)
         
         tableView.snp.makeConstraints { maker in
@@ -43,53 +44,53 @@ extension HXBPlanListController {
             maker.left.right.equalToSuperview()
             maker.bottom.equalToSuperview().offset(view.safeAreaInsets.bottom)
         }
+        
+        tableView.header = HXBRefreshHeader(target: self, action: #selector(getNewData))
+        
+    }
+    
+    override func reactive_bind() {
+        viewModel.reloadDataSignal.observeValues { [weak self] in
+            self?.tableView.reloadData()
+            self?.tableView.header?.endRefreshing()
+            self?.tableView.footer?.endRefreshing()
+            
+            if self?.viewModel.footerType == .moreData {
+                if !(self?.tableView.footer != nil && self!.tableView.footer!.loadNoMoreData == false) {
+                    self?.tableView.footer = HXBRefreshFooter(target: self, action: #selector(HXBPlanListController.getMoreData))
+                }
+            } else if self?.viewModel.footerType == .nomoreData {
+                if !(self?.tableView.footer != nil && self!.tableView.footer!.loadNoMoreData == true) {
+                    self?.tableView.footer = HXBRefreshNoMoreDataFooter()
+                }
+            } else if self?.viewModel.footerType == .none {
+                self?.tableView.footer = nil
+            }
+        }
     }
 }
 
-// MARK: - Action
 extension HXBPlanListController {
+    @objc fileprivate func getNewData() {
+        viewModel.getData(isNew: true)
+    }
     
-}
-
-// MARK: - Network
-extension HXBPlanListController {
-    
+    @objc fileprivate func getMoreData() {
+        viewModel.getData(isNew: false)
+    }
 }
 
 // MARK: - Delegate Internal
 
 // MARK: -
 extension HXBPlanListController: UITableViewDataSource {
-
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 100
+        return viewModel.dataSource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "id", for: indexPath)
-        cell.backgroundColor = UIColor.cyan
-        cell.textLabel?.text = "item + \(indexPath.row)"
+        let cell = tableView.dequeueReusableCell(withIdentifier: HXBPlanListCell.identifier, for: indexPath) as! HXBPlanListCell
+        cell.planListCellViewModel = viewModel.dataSource[indexPath.row]
         return cell
     }
 }
-
-// MARK: - Delegate External
-
-// MARK: -
-
-// MARK: - Helper
-extension HXBPlanListController {
-    
-}
-
-// MARK: - Other
-extension HXBPlanListController {
-    
-}
-
-// MARK: - Public
-extension HXBPlanListController {
-    
-}
-
