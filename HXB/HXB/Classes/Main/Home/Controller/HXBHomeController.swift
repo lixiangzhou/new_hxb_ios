@@ -16,6 +16,8 @@ class HXBHomeController: HXBViewController {
         setUI()
     }
 
+    // MARK: - Private Property
+    fileprivate let msgDot = UIView()
 }
 
 // MARK: - UI
@@ -28,7 +30,20 @@ extension HXBHomeController {
         let titleItem = UIBarButtonItem(customView: titleLabel)
         navigationItem.leftBarButtonItem = titleItem
         
+        let msgBtn = UIButton(imageName: "home_message", target: nil, action: nil)
+        msgBtn.imageView?.contentMode = .scaleAspectFill
+        msgDot.backgroundColor = UIColor(stringHexValue: "FF48AF")
+        msgDot.layer.cornerRadius = 2.5
+        msgDot.layer.masksToBounds = true
+        msgBtn.addSubview(msgDot)
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: msgBtn)
+        
+        msgDot.snp.makeConstraints { maker in
+            maker.top.equalToSuperview()
+            maker.right.equalToSuperview().offset(3)
+            maker.width.height.equalTo(5)
+        }
         
     }
 }
