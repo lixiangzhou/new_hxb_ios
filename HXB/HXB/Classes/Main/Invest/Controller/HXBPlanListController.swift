@@ -88,7 +88,7 @@ extension HXBPlanListController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: HXBPlanListCell.identifier, for: indexPath) as! HXBPlanListCell
-        cell.planListCellViewModel = viewModel.dataSource[indexPath.row]
+        cell.cellViewModel = viewModel.dataSource[indexPath.row]
         return cell
     }
 }

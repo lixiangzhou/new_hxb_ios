@@ -25,19 +25,19 @@ class HXBPlanListCell: UITableViewCell {
     // MARK: - Public Property
     static let identifier = "HXBPlanListCellIdentifier"
     
-    var planListCellViewModel: HXBPlatListCellViewModel! {
+    var cellViewModel: HXBPlatListCellViewModel! {
         didSet {
             
             updateNameTagView()
             
-            nameLabel.attributedText = planListCellViewModel.nameAttributeString
-            tagLabel.attributedText = planListCellViewModel.tagAttributeString
-            interestLabel.attributedText = planListCellViewModel.interestAttributeString
-            dateLabel.attributedText = planListCellViewModel.dateAttributeString
+            nameLabel.attributedText = cellViewModel.nameAttributeString
+            tagLabel.attributedText = cellViewModel.tagAttributeString
+            interestLabel.attributedText = cellViewModel.interestAttributeString
+            dateLabel.attributedText = cellViewModel.dateAttributeString
             
-            statusBtn.setTitle(planListCellViewModel.statusText, for: .normal)
-            statusBtn.setTitleColor(planListCellViewModel.statusTextColor, for: .normal)
-            statusBtn.setBackgroundImage(planListCellViewModel.statusBackgroundImage, for: .normal)
+            statusBtn.setTitle(cellViewModel.statusText, for: .normal)
+            statusBtn.setTitleColor(cellViewModel.statusTextColor, for: .normal)
+            statusBtn.setBackgroundImage(cellViewModel.statusBackgroundImage, for: .normal)
             
             updatePreferentialViews()
         }
@@ -45,19 +45,20 @@ class HXBPlanListCell: UITableViewCell {
     
     // MARK: - Private Property
     fileprivate let nameLabel = UILabel(text: "", font: hxb.font.f14, textColor: hxb.color.important)
-    fileprivate let tagLabel = UILabel(text: "", font: hxb.font.f11, textColor: UIColor(stringHexValue: "FD9718")!)
+    fileprivate let tagLabel = UILabel(text: "", font: hxb.font.f11, textColor: hxb.color.tagColor)
     fileprivate let interestLabel = UILabel(text: "", font: hxb.font.f25, textColor: hxb.color.theme)
     fileprivate let interestDescLabel = UILabel(text: "平均历史年化收益", font: hxb.font.f12, textColor: hxb.color.important)
     fileprivate let dateLabel = UILabel(text: "", font: hxb.font.f17, textColor: hxb.color.important)
     fileprivate let dateDescLabel = UILabel(text: "适应出借期限", font: hxb.font.f12, textColor: hxb.color.important)
     fileprivate let statusBtn = UIButton(font: hxb.font.f14)
     fileprivate let preferentialView = UIView()
-    fileprivate let bottomLine = UIView()
 }
 
 // MARK: - UI
 extension HXBPlanListCell {
     fileprivate func setUI() {
+        let bottomLine = UIView()
+        
         contentView.addSubview(nameLabel)
         contentView.addSubview(tagLabel)
         contentView.addSubview(interestLabel)
@@ -68,7 +69,7 @@ extension HXBPlanListCell {
         contentView.addSubview(preferentialView)
         contentView.addSubview(bottomLine)
         
-        tagLabel.backgroundColor = UIColor(stringHexValue: "FD971814")
+        tagLabel.backgroundColor = hxb.color.tagBgColor
         tagLabel.layer.cornerRadius = 1
         tagLabel.layer.masksToBounds = true
         bottomLine.backgroundColor = hxb.color.sepLine
@@ -139,7 +140,7 @@ extension HXBPlanListCell {
             v.removeFromSuperview()
         }
         
-        if planListCellViewModel.hasPreferential {
+        if cellViewModel.hasPreferential {
             preferentialView.snp.updateConstraints { maker in
                 maker.height.equalTo(33)
             }
@@ -151,12 +152,12 @@ extension HXBPlanListCell {
             //                btn.sizeToFit()
             //                btn.zz_size = CGSize(width: btn.zz_size.width + 4, height: 16)
             //            }
-            if planListCellViewModel.planModel.hasMoneyOffCoupon {
+            if cellViewModel.planModel.hasMoneyOffCoupon {
                 let btn = addTagToPreferentialView(title: "满减", titleColor: UIColor(stringHexValue: "4C7BFE")!, imgName: "mj_background")
                 btn.zz_size = CGSize(width: 32, height: 16)
             }
             
-            if planListCellViewModel.planModel.hasDiscountCoupon {
+            if cellViewModel.planModel.hasDiscountCoupon {
                 let btn = addTagToPreferentialView(title: "折扣", titleColor: UIColor(stringHexValue: "FF3B2D")!, imgName: "zk_background")
                 btn.zz_size = CGSize(width: 32, height: 16)
             }
@@ -190,7 +191,7 @@ extension HXBPlanListCell {
     }
     
     fileprivate func updateNameTagView() {
-        if planListCellViewModel.planModel.novice == 1 {
+        if cellViewModel.planModel.novice == 1 {
             nameLabel.snp.updateConstraints { maker in
                 maker.height.equalTo(0)
             }

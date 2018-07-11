@@ -45,8 +45,12 @@ extension hxb {
         /// 半透明背景 UIColor.init(white: 0.5, alpha: 0.8)
         static let alphaBackgroundColor = UIColor.init(white: 0.5, alpha: 0.8)
         
-        ///
+        /// 9295A2
         static let disableTextColor = UIColor(stringHexValue: "9295A2")!
+        /// FD9718
+        static let tagColor = UIColor(stringHexValue: "FD9718")!
+        /// FD971814
+        static let tagBgColor = UIColor(stringHexValue: "FD971814")
         
         /// 用于特别需要强调和突出的颜色填充，颜色值范围：【fe654d ~ ff3d4f】
         ///

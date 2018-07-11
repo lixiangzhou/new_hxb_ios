@@ -52,12 +52,13 @@ class HXBLoanListCell: UITableViewCell {
     fileprivate let leftMonthLabel = UILabel(text: "", font: hxb.font.f17, textColor: hxb.color.important)
     fileprivate let leftMonthDescLabel = UILabel(text: "剩余期限", font: hxb.font.f12, textColor: hxb.color.disableTextColor)
     fileprivate let statusBtn = UIButton(font: hxb.font.f14)
-    fileprivate let bottomLine = UIView()
 }
 
 // MARK: - UI
 extension HXBLoanListCell {
     fileprivate func setUI() {
+        let bottomLine = UIView()
+        
         contentView.addSubview(nameLabel)
         contentView.addSubview(leftMoneyLabel)
         contentView.addSubview(interestLabel)

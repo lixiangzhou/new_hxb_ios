@@ -13,6 +13,9 @@ extension hxb {
         /// 获取token
         static let token = "/token"
         
+        /// 首页
+        static let home = "/home"
+        
         /// 计划列表
         static let plan = "/plan"
         /// 散标列表

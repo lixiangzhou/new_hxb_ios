@@ -13,7 +13,10 @@ class HXBHomeController: HXBViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        viewModel = HXBHomeViewModel(view)
         setUI()
+        reactive_bind()
+        viewModel.getData()
     }
 
     // MARK: - Private Property
@@ -30,8 +33,9 @@ extension HXBHomeController {
         
         setNavigationViews()
         
-        tableView.register(HXBPlanListCell.self, forCellReuseIdentifier: HXBPlanListCell.identifier)
-        tableView.estimatedRowHeight = 130
+        tableView.register(HXBHomePlanCell.self, forCellReuseIdentifier: HXBHomePlanCell.identifier)
+        tableView.estimatedRowHeight = HXBHomePlanCell.cellHeight
+        tableView.dataSource = self
         view.addSubview(tableView)
         
         tableView.snp.makeConstraints { maker in
@@ -40,7 +44,7 @@ extension HXBHomeController {
             maker.bottom.equalToSuperview().offset(view.safeAreaInsets.bottom)
         }
         
-//        tableView.header = HXBRefreshHeader(target: self, action: #selector(getData))
+        tableView.header = HXBRefreshHeader(target: viewModel, action: #selector(HXBHomeViewModel.getData))
     }
     
     private func setNavigationViews() {
@@ -63,4 +67,27 @@ extension HXBHomeController {
             maker.width.height.equalTo(5)
         }
     }
+    
+    override func reactive_bind() {
+        viewModel.reloadDataSignal.observeValues { [weak self] in
+            self?.tableView.reloadData()
+            self?.tableView.header?.endRefreshing()
+        }
+    }
 }
+
+// MARK: - Delegate Internal
+
+// MARK: -
+extension HXBHomeController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.dataSource.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: HXBHomePlanCell.identifier, for: indexPath) as! HXBHomePlanCell
+        cell.cellViewModel = viewModel.dataSource[indexPath.row]
+        return cell
+    }
+}
+

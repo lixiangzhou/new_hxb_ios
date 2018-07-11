@@ -14,6 +14,8 @@ extension hxb {
         /// 用于个人账户也最重要金额文字 【40】
         static let f40 = UIFont(name: fontName, size: 40)!
         
+        static let f32 = UIFont(name: fontName, size: 32)!
+        
         /// 用于强调性醒目文字 【25】
         static let f25 = UIFont(name: fontName, size: 25)!
         
@@ -35,6 +37,7 @@ extension hxb {
         /// 用于交易、体现记录中文字【14】
         static let f14 = UIFont(name: fontName, size: 14)!
         
+        static let f13 = UIFont(name: fontName, size: 13)!
         /// 用于协调等辅助性文字 【12】
         static let f12 = UIFont(name: fontName, size: 12)!
         
