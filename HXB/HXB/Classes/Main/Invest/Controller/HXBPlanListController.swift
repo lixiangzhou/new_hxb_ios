@@ -32,7 +32,6 @@ class HXBPlanListController: HXBViewController {
 // MARK: - UI
 extension HXBPlanListController {
     fileprivate func setUI() {
-        view.backgroundColor = UIColor.orange
         tableView.dataSource = self
         
         tableView.register(HXBPlanListCell.self, forCellReuseIdentifier: HXBPlanListCell.identifier)
@@ -46,7 +45,6 @@ extension HXBPlanListController {
         }
         
         tableView.header = HXBRefreshHeader(target: self, action: #selector(getNewData))
-        
     }
     
     override func reactive_bind() {

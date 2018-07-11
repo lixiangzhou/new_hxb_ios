@@ -16,7 +16,7 @@ class HXBLoanListViewModel: HXBViewModel {
     
     var (reloadDataSignal, reloadDataObserver) = Signal<(), NoError>.pipe()
     
-    var dataSource = [HXBListLoanModel]()
+    var dataSource = [HXBLoanModel]()
     
     var footerType: HXBFooterRefreshType = .moreData
     
@@ -54,7 +54,7 @@ class HXBLoanListViewModel: HXBViewModel {
                     }
                     
                     if let dataList = json["data"]["dataList"].arrayObject,
-                        let modelList = [HXBListLoanModel].deserialize(from: dataList) as? [HXBListLoanModel] {
+                        let modelList = [HXBLoanModel].deserialize(from: dataList) as? [HXBLoanModel] {
                         if isNew {
                             self.dataSource = modelList
                         } else {

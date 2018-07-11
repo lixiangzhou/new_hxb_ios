@@ -1,14 +1,14 @@
 //
-//  HXBListLoanModel.swift
+//  HXBLoanModel.swift
 //  HXB
 //
-//  Created by lxz on 2018/7/6.
+//  Created by lxz on 2018/7/11.
 //Copyright © 2018年 lixiangzhou. All rights reserved.
 //
 
 import UIKit
 
-class HXBListLoanModel: HXBModel {
+class HXBLoanModel: HXBModel {
     /// 借款总额
     var amount = ""
     /// 借款周期（月）

@@ -53,11 +53,11 @@ class HXBPlanListViewModel: HXBViewModel {
                         self.footerType = .moreData
                     }
                     
-                    let dataList = [HXBListPlanModel].deserialize(from: json["data"]["dataList"].arrayObject) as? [HXBListPlanModel]
-                    let recommendList = [HXBListPlanModel].deserialize(from: json["data"]["recommendList"].arrayObject) as? [HXBListPlanModel]
-                    let newbieProductList = [HXBListPlanModel].deserialize(from: json["data"]["newbieProductList"].arrayObject) as? [HXBListPlanModel]
+                    let dataList = [HXBPlanModel].deserialize(from: json["data"]["dataList"].arrayObject) as? [HXBPlanModel]
+                    let recommendList = [HXBPlanModel].deserialize(from: json["data"]["recommendList"].arrayObject) as? [HXBPlanModel]
+                    let newbieProductList = [HXBPlanModel].deserialize(from: json["data"]["newbieProductList"].arrayObject) as? [HXBPlanModel]
                     
-                    var list = [HXBListPlanModel]()
+                    var list = [HXBPlanModel]()
                     if newbieProductList != nil && newbieProductList!.count > 0 {
                         list.append(contentsOf: newbieProductList!)
                     }
@@ -74,7 +74,7 @@ class HXBPlanListViewModel: HXBViewModel {
                         var vmList = [HXBPlatListCellViewModel]()
                         for model in list {
                             let vm = HXBPlatListCellViewModel()
-                            vm.listPlanModel = model
+                            vm.planModel = model
                             vmList.append(vm)
                         }
                         if isNew {

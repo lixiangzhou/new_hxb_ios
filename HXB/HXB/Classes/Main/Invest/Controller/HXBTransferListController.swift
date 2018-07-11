@@ -32,7 +32,6 @@ class HXBTransferListController: HXBViewController {
 // MARK: - UI
 extension HXBTransferListController {
     fileprivate func setUI() {
-        view.backgroundColor = UIColor.orange
         tableView.dataSource = self
         
         tableView.register(HXBTransferListCell.self, forCellReuseIdentifier: HXBTransferListCell.identifier)
@@ -46,7 +45,6 @@ extension HXBTransferListController {
         }
         
         tableView.header = HXBRefreshHeader(target: self, action: #selector(getNewData))
-        
     }
     
     override func reactive_bind() {
@@ -90,7 +88,7 @@ extension HXBTransferListController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: HXBTransferListCell.identifier, for: indexPath) as! HXBTransferListCell
-        cell.listTransferModel = viewModel.dataSource[indexPath.row]
+        cell.transferModel = viewModel.dataSource[indexPath.row]
         return cell
     }
 }

@@ -26,24 +26,24 @@ class HXBTransferListCell: UITableViewCell {
     static let identifier = "HXBTransferListCellIdentifier"
     static let cellHeight: CGFloat = 110
     
-    var listTransferModel: HXBListTransferModel! {
+    var transferModel: HXBTransferModel! {
         didSet {
-            nameLabel.text = listTransferModel.title
+            nameLabel.text = transferModel.title
             
-            leftMoneyLabel.text = "待转让金额：\(listTransferModel.leftTransAmount)元"
+            leftMoneyLabel.text = "待转让金额：\(transferModel.leftTransAmount)元"
             
             // 年利率
-            interestLabel.text = listTransferModel.interest + "%"
+            interestLabel.text = transferModel.interest + "%"
             
             // 剩余期限
-            let leftMonths = NSMutableAttributedString(string: listTransferModel.leftMonths)
+            let leftMonths = NSMutableAttributedString(string: transferModel.leftMonths)
             leftMonths.append(NSAttributedString(string: "个月", attributes: [NSAttributedStringKey.font: hxb.font.f12]))
             leftMonthLabel.attributedText = leftMonths
             
             // 状态
-            statusBtn.setTitle(listTransferModel.statusText, for: .normal)
+            statusBtn.setTitle(transferModel.statusText, for: .normal)
             
-            if listTransferModel.status == "TRANSFERING" {
+            if transferModel.status == "TRANSFERING" {
                 statusBtn.setTitleColor(.white, for: .normal)
                 statusBtn.setBackgroundImage(UIImage("bt_bg_nor"), for: .normal)
             } else {

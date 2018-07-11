@@ -18,7 +18,7 @@ class HXBPlatListCellViewModel: HXBViewModel {
     var statusTextColor: UIColor?
     var statusText: String?
     
-    var listPlanModel: HXBListPlanModel! {
+    var planModel: HXBPlanModel! {
         didSet {
             nameAttributeString = calNameAttributeString()
             tagAttributeString = calTagAttributeString()
@@ -28,13 +28,13 @@ class HXBPlatListCellViewModel: HXBViewModel {
             calStatusValues()
             
             // TODO: 缺加息的判断
-            hasPreferential = listPlanModel.hasDiscountCoupon || listPlanModel.hasMoneyOffCoupon
+            hasPreferential = planModel.hasDiscountCoupon || planModel.hasMoneyOffCoupon
         }
     }
     
     private func calNameAttributeString() -> NSAttributedString {
         var period = ""
-        let lockPeriod = Int(listPlanModel.lockPeriod) ?? 0
+        let lockPeriod = Int(planModel.lockPeriod) ?? 0
         switch lockPeriod {
         case ...3:
             period = "短期"
@@ -49,12 +49,12 @@ class HXBPlatListCellViewModel: HXBViewModel {
         }
         let nameAttributeString = NSMutableAttributedString(string: "\(period) - \(lockPeriod)个月")
         nameAttributeString.append(NSAttributedString(string: " | ", attributes: [NSAttributedStringKey.foregroundColor: UIColor(stringHexValue: "D8D8D8")!]))
-        nameAttributeString.append(NSAttributedString(string: "\(listPlanModel.minRegisterAmount)元起投", attributes: [NSAttributedStringKey.font: hxb.font.f12]))
+        nameAttributeString.append(NSAttributedString(string: "\(planModel.minRegisterAmount)元起投", attributes: [NSAttributedStringKey.font: hxb.font.f12]))
         return nameAttributeString
     }
     
     private func calTagAttributeString() -> NSAttributedString? {
-        if listPlanModel.tag.count > 0 {
+        if planModel.tag.count > 0 {
             let tagAttributeString = NSMutableAttributedString()
             
             let attachment = NSTextAttachment()
@@ -63,7 +63,7 @@ class HXBPlatListCellViewModel: HXBViewModel {
             
             tagAttributeString.append(NSAttributedString(attachment: attachment))
             tagAttributeString.append(NSAttributedString(string: " "))
-            tagAttributeString.append(NSAttributedString(string: listPlanModel.tag))
+            tagAttributeString.append(NSAttributedString(string: planModel.tag))
             tagAttributeString.append(NSAttributedString(string: " "))
             
             return tagAttributeString
@@ -72,18 +72,18 @@ class HXBPlatListCellViewModel: HXBViewModel {
     }
     
     private func calInterestAttributeString() -> NSAttributedString {
-        if listPlanModel.novice == 1 && listPlanModel.expectedRate.count > 0 {
-            let interestAttributeString = NSMutableAttributedString(string: String(format: "%.1f", Double(listPlanModel.expectedRate)!))
-            if listPlanModel.subsidyInterestRate.count > 0 {
-                interestAttributeString.append(NSAttributedString(string: String(format: "%%+%.1f%%", Double(listPlanModel.subsidyInterestRate)!), attributes: [NSAttributedStringKey.font: hxb.font.f14]))
+        if planModel.novice == 1 && planModel.expectedRate.count > 0 {
+            let interestAttributeString = NSMutableAttributedString(string: String(format: "%.1f", Double(planModel.expectedRate)!))
+            if planModel.subsidyInterestRate.count > 0 {
+                interestAttributeString.append(NSAttributedString(string: String(format: "%%+%.1f%%", Double(planModel.subsidyInterestRate)!), attributes: [NSAttributedStringKey.font: hxb.font.f14]))
             } else {
                 interestAttributeString.append(NSAttributedString(string: "%"))
             }
             return interestAttributeString
         } else {
-            let interestAttributeString = NSMutableAttributedString(string: String(format: "%.1f", Double(listPlanModel.baseInterestRate)!))
-            if listPlanModel.extraInterestRate.count > 0 {
-                interestAttributeString.append(NSAttributedString(string: String(format: "%%+%.1f%%", Double(listPlanModel.extraInterestRate)!), attributes: [NSAttributedStringKey.font: hxb.font.f14]))
+            let interestAttributeString = NSMutableAttributedString(string: String(format: "%.1f", Double(planModel.baseInterestRate)!))
+            if planModel.extraInterestRate.count > 0 {
+                interestAttributeString.append(NSAttributedString(string: String(format: "%%+%.1f%%", Double(planModel.extraInterestRate)!), attributes: [NSAttributedStringKey.font: hxb.font.f14]))
             } else {
                 interestAttributeString.append(NSAttributedString(string: "%"))
             }
@@ -92,18 +92,18 @@ class HXBPlatListCellViewModel: HXBViewModel {
     }
     
     private func calDateAttributeString() -> NSAttributedString {
-        if listPlanModel.lockPeriod.count > 0 {
+        if planModel.lockPeriod.count > 0 {
             var lock = ""
-            if listPlanModel.novice == 1 {
-                lock = listPlanModel.lockPeriod
+            if planModel.novice == 1 {
+                lock = planModel.lockPeriod
             } else {
-                lock = listPlanModel.extendLockPeriod
+                lock = planModel.extendLockPeriod
             }
             let dateAttributeString = NSMutableAttributedString(string: lock)
             dateAttributeString.append(NSAttributedString(string: "个月", attributes: [NSAttributedStringKey.font: hxb.font.f12]))
             return dateAttributeString
-        } else if listPlanModel.lockDays > 0 {
-            let dateAttributeString = NSMutableAttributedString(string: "\(listPlanModel.lockDays)")
+        } else if planModel.lockDays > 0 {
+            let dateAttributeString = NSMutableAttributedString(string: "\(planModel.lockDays)")
             dateAttributeString.append(NSAttributedString(string: "天", attributes: [NSAttributedStringKey.font: hxb.font.f12]))
             return dateAttributeString
         } else {
@@ -114,7 +114,7 @@ class HXBPlatListCellViewModel: HXBViewModel {
     private func calStatusValues() {
         statusTextColor = hxb.color.disableTextColor
         statusBackgroundImage = UIImage("bt_bg_dis_gray")
-        switch listPlanModel.unifyStatus {
+        switch planModel.unifyStatus {
         case 0, 1, 2, 3, 4, 5:
             statusText = "等待加入"
         case 6:

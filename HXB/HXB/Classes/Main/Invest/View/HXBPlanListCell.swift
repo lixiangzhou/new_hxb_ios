@@ -24,7 +24,6 @@ class HXBPlanListCell: UITableViewCell {
     
     // MARK: - Public Property
     static let identifier = "HXBPlanListCellIdentifier"
-    static let cellHeight: CGFloat = 44
     
     var planListCellViewModel: HXBPlatListCellViewModel! {
         didSet {
@@ -152,12 +151,12 @@ extension HXBPlanListCell {
             //                btn.sizeToFit()
             //                btn.zz_size = CGSize(width: btn.zz_size.width + 4, height: 16)
             //            }
-            if planListCellViewModel.listPlanModel.hasMoneyOffCoupon {
+            if planListCellViewModel.planModel.hasMoneyOffCoupon {
                 let btn = addTagToPreferentialView(title: "满减", titleColor: UIColor(stringHexValue: "4C7BFE")!, imgName: "mj_background")
                 btn.zz_size = CGSize(width: 32, height: 16)
             }
             
-            if planListCellViewModel.listPlanModel.hasDiscountCoupon {
+            if planListCellViewModel.planModel.hasDiscountCoupon {
                 let btn = addTagToPreferentialView(title: "折扣", titleColor: UIColor(stringHexValue: "FF3B2D")!, imgName: "zk_background")
                 btn.zz_size = CGSize(width: 32, height: 16)
             }
@@ -191,7 +190,7 @@ extension HXBPlanListCell {
     }
     
     fileprivate func updateNameTagView() {
-        if planListCellViewModel.listPlanModel.novice == 1 {
+        if planListCellViewModel.planModel.novice == 1 {
             nameLabel.snp.updateConstraints { maker in
                 maker.height.equalTo(0)
             }

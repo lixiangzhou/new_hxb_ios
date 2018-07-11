@@ -15,7 +15,7 @@ import HandyJSON
 class HXBTransferListViewModel: HXBViewModel {
     var (reloadDataSignal, reloadDataObserver) = Signal<(), NoError>.pipe()
     
-    var dataSource = [HXBListTransferModel]()
+    var dataSource = [HXBTransferModel]()
     
     var footerType: HXBFooterRefreshType = .moreData
     
@@ -53,7 +53,7 @@ class HXBTransferListViewModel: HXBViewModel {
                     }
                     
                     if let dataList = json["data"]["dataList"].arrayObject,
-                        let modelList = [HXBListTransferModel].deserialize(from: dataList) as? [HXBListTransferModel] {
+                        let modelList = [HXBTransferModel].deserialize(from: dataList) as? [HXBTransferModel] {
                         if isNew {
                             self.dataSource = modelList
                         } else {

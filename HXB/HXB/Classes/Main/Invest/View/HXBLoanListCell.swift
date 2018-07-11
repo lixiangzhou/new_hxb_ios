@@ -26,16 +26,16 @@ class HXBLoanListCell: UITableViewCell {
     static let identifier = "HXBLoanListCellIdentifier"
     static let cellHeight: CGFloat = 110
     
-    var listLoanModel: HXBListLoanModel! {
+    var loanModel: HXBLoanModel! {
         didSet {
-            nameLabel.text = listLoanModel.title
+            nameLabel.text = loanModel.title
             
             leftMonthLabel.text = "剩余金额：\(1000.00)"
             
-            interestLabel.text = "\(listLoanModel.interest)%"
+            interestLabel.text = "\(loanModel.interest)%"
             
             // 剩余期限
-            let leftMonths = NSMutableAttributedString(string: listLoanModel.months)
+            let leftMonths = NSMutableAttributedString(string: loanModel.months)
             leftMonths.append(NSAttributedString(string: "个月", attributes: [NSAttributedStringKey.font: hxb.font.f12]))
             leftMonthLabel.attributedText = leftMonths
             
@@ -120,7 +120,7 @@ extension HXBLoanListCell {
 extension HXBLoanListCell {
     fileprivate func setStatus() {
         
-        if listLoanModel.status == "OPEN" {
+        if loanModel.status == "OPEN" {
             statusBtn.setTitleColor(.white, for: .normal)
             statusBtn.setBackgroundImage(UIImage("bt_bg_nor"), for: .normal)
         } else {
@@ -129,7 +129,7 @@ extension HXBLoanListCell {
         }
         
         var statusTxt = ""
-        switch listLoanModel.status {
+        switch loanModel.status {
         case "OPEN":
             statusTxt = "立即投标"
         case "READY", "FIRST_READY":

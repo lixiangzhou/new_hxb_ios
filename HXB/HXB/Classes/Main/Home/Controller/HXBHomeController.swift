@@ -18,6 +18,8 @@ class HXBHomeController: HXBViewController {
 
     // MARK: - Private Property
     fileprivate let msgDot = UIView()
+    fileprivate var tableView = HXBTableView(style: .plain, dataSource: nil, delegate: nil)
+    fileprivate var viewModel: HXBHomeViewModel!
 }
 
 // MARK: - UI
@@ -26,6 +28,22 @@ extension HXBHomeController {
         backItemStyle = .none
         navigationBarBackgroundStyle = .white
         
+        setNavigationViews()
+        
+        tableView.register(HXBPlanListCell.self, forCellReuseIdentifier: HXBPlanListCell.identifier)
+        tableView.estimatedRowHeight = 130
+        view.addSubview(tableView)
+        
+        tableView.snp.makeConstraints { maker in
+            maker.top.equalToSuperview().offset(view.safeAreaInsets.top)
+            maker.left.right.equalToSuperview()
+            maker.bottom.equalToSuperview().offset(view.safeAreaInsets.bottom)
+        }
+        
+//        tableView.header = HXBRefreshHeader(target: self, action: #selector(getData))
+    }
+    
+    private func setNavigationViews() {
         let titleLabel = UILabel(text: "红小宝", font: hxb.font.f19, textColor: hxb.color.important)
         let titleItem = UIBarButtonItem(customView: titleLabel)
         navigationItem.leftBarButtonItem = titleItem
@@ -44,6 +62,5 @@ extension HXBHomeController {
             maker.right.equalToSuperview().offset(3)
             maker.width.height.equalTo(5)
         }
-        
     }
 }

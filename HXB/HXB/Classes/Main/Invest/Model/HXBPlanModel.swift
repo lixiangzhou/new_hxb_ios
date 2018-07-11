@@ -1,14 +1,14 @@
 //
-//  HXBListPlanModel.swift
+//  HXBPlanModel.swift
 //  HXB
 //
-//  Created by lxz on 2018/7/6.
+//  Created by lxz on 2018/7/11.
 //Copyright © 2018年 lixiangzhou. All rights reserved.
 //
 
 import UIKit
 
-class HXBListPlanModel: HXBModel {
+class HXBPlanModel: HXBModel {
     /// 锁定期限(月),计划期限（新手产品如果是月也用此字段，int类型）
     var lockPeriod: String = ""
     /// 运营文案

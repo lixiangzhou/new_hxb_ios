@@ -34,7 +34,6 @@ class HXBLoanListController: HXBViewController {
 // MARK: - UI
 extension HXBLoanListController {
     fileprivate func setUI() {
-        view.backgroundColor = UIColor.orange
         tableView.dataSource = self
         
         tableView.register(HXBLoanListCell.self, forCellReuseIdentifier: HXBLoanListCell.identifier)
@@ -48,7 +47,6 @@ extension HXBLoanListController {
         }
         
         tableView.header = HXBRefreshHeader(target: self, action: #selector(getNewData))
-        
     }
     
     override func reactive_bind() {
@@ -92,7 +90,7 @@ extension HXBLoanListController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: HXBLoanListCell.identifier, for: indexPath) as! HXBLoanListCell
-        cell.listLoanModel = viewModel.dataSource[indexPath.row]
+        cell.loanModel = viewModel.dataSource[indexPath.row]
         return cell
     }
 }

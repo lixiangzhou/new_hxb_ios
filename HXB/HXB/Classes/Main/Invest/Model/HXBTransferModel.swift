@@ -1,14 +1,14 @@
 //
-//  HXBListTransferModel.swift
+//  HXBTransferModel.swift
 //  HXB
 //
-//  Created by lxz on 2018/7/6.
+//  Created by lxz on 2018/7/11.
 //Copyright © 2018年 lixiangzhou. All rights reserved.
 //
 
 import UIKit
 
-class HXBListTransferModel: HXBModel {
+class HXBTransferModel: HXBModel {
     /// 借款标题
     var title = ""
     /// 转让id
