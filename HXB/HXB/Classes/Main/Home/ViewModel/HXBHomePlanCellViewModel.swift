@@ -10,20 +10,33 @@ import UIKit
 
 class HXBHomePlanCellViewModel: HXBViewModel {
     var nameText: String?
+    
     var statusText: String?
     var statusTextColor: UIColor?
+    var statusBackgroundImage: UIImage?
+    
     var interestAttributeString: NSAttributedString?
+    
     var dateText: String?
+    
     var minRegisterText: String?
+    
+    var dateAndMinRegisterText: String?
+    
     var tagAttributeString: NSAttributedString?
+    
+    private var isNew = false
     
     var planModel: HXBPlanModel! {
         didSet {
+            isNew = planModel.novice == 1
+            
             nameText = "红利智投 | " + planModel.featuredSlogan
             calStatusValues()
             interestAttributeString = calInterestAttributeString()
-            dateText = calDateText()
+            dateText = "适应出借" + calDateText()
             minRegisterText = planModel.minRegisterAmount + "元起投"
+            dateAndMinRegisterText = calDateText() + " | " + minRegisterText!
             tagAttributeString = calTagAttributeString()
         }
     }
@@ -47,33 +60,53 @@ class HXBHomePlanCellViewModel: HXBViewModel {
     }
     
     private func calDateText() -> String {
+        
         if planModel.lockPeriod.count > 0 {
-            return "适应出借\(planModel.extendLockPeriod)个月"
+            return "\(planModel.extendLockPeriod)个月"
         } else if planModel.lockDays > 0 {
-            return "适应出借\(planModel.lockDays)天"
+            return "\(planModel.lockDays)天"
         } else {
             return "--"
         }
     }
     
     private func calInterestAttributeString() -> NSAttributedString {
-        let interestAttributeString = NSMutableAttributedString(string: String(format: "%.1f", Double(planModel.baseInterestRate)!))
-        if planModel.extraInterestRate.count > 0 {
-            interestAttributeString.append(NSAttributedString(string: String(format: "%%+%.1f%%", Double(planModel.extraInterestRate)!), attributes: [NSAttributedStringKey.font: hxb.font.f15]))
-        } else {
-            interestAttributeString.append(NSAttributedString(string: "%", attributes: [NSAttributedStringKey.font: hxb.font.f15]))
+        if isNew {
+            let interestAttributeString = NSMutableAttributedString(string: String(format: "%.1f", Double(planModel.expectedRate)!), attributes: [NSAttributedStringKey.font: hxb.font.f32, NSAttributedStringKey.foregroundColor: hxb.color.important])
+            interestAttributeString.append(NSAttributedString(string: "%+", attributes: [NSAttributedStringKey.font: hxb.font.f13, NSAttributedStringKey.foregroundColor: hxb.color.important]))
+            if planModel.subsidyInterestRate.count > 0 {
+                interestAttributeString.append(NSAttributedString(string: String(format: "%.1f", Double(planModel.subsidyInterestRate)!), attributes: [NSAttributedStringKey.font: hxb.font.f32, NSAttributedStringKey.foregroundColor: hxb.color.theme]))
+                interestAttributeString.append(NSAttributedString(string: "%", attributes: [NSAttributedStringKey.font: hxb.font.f13, NSAttributedStringKey.foregroundColor: hxb.color.theme]))
+            }
+            return interestAttributeString
+        } else {        
+            let interestAttributeString = NSMutableAttributedString(string: String(format: "%.1f", Double(planModel.baseInterestRate)!))
+            if planModel.extraInterestRate.count > 0 {
+                interestAttributeString.append(NSAttributedString(string: String(format: "%%+%.1f%%", Double(planModel.extraInterestRate)!), attributes: [NSAttributedStringKey.font: hxb.font.f15]))
+            } else {
+                interestAttributeString.append(NSAttributedString(string: "%", attributes: [NSAttributedStringKey.font: hxb.font.f15]))
+            }
+            return interestAttributeString
         }
-        return interestAttributeString
+        
     }
     
     private func calStatusValues() {
         statusTextColor = UIColor(stringHexValue: "BCBCBC")
+        if isNew {
+            statusTextColor = hxb.color.disableTextColor
+            statusBackgroundImage = UIImage("bt_bg_dis_gray")
+        }
         switch planModel.unifyStatus {
         case 0, 1, 2, 3, 4, 5:
             statusText = "等待加入"
         case 6:
             statusText = "立即加入"
-            statusTextColor = UIColor.white
+            statusTextColor = hxb.color.theme
+            if isNew {
+                statusTextColor = UIColor.white
+                statusBackgroundImage = UIImage("bt_bg_nor")
+            }
         case 7:
             statusText = "销售结束"
         case 8:

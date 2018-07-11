@@ -24,7 +24,6 @@ class HXBHomePlanCell: UITableViewCell {
     
     // MARK: - Public Property
     static let identifier = "HXBHomePlanCellIdentifier"
-    static let cellHeight: CGFloat = 44
     
     var cellViewModel: HXBHomePlanCellViewModel! {
         didSet {

@@ -34,8 +34,11 @@ extension HXBHomeController {
         setNavigationViews()
         
         tableView.register(HXBHomePlanCell.self, forCellReuseIdentifier: HXBHomePlanCell.identifier)
-        tableView.estimatedRowHeight = HXBHomePlanCell.cellHeight
+        tableView.register(HXBHomeNewPlanCell.self, forCellReuseIdentifier: HXBHomeNewPlanCell.identifier)
+        tableView.estimatedRowHeight = 135
         tableView.dataSource = self
+        tableView.delegate = self
+        tableView.sectionHeaderHeight = 42
         view.addSubview(tableView)
         
         tableView.snp.makeConstraints { maker in
@@ -79,15 +82,46 @@ extension HXBHomeController {
 // MARK: - Delegate Internal
 
 // MARK: -
-extension HXBHomeController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+extension HXBHomeController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let model = viewModel.dataSource[section]
+        
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor.white
+        let textLabel = UILabel(text: model.type.rawValue, font: UIFont.boldSystemFont(ofSize: 17), textColor: hxb.color.important)
+        headerView.addSubview(textLabel)
+        
+        textLabel.snp.makeConstraints { maker in
+            maker.left.equalTo(hxb.length.edgeScreen)
+            maker.bottom.equalTo(-7)
+        }
+        return headerView
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel.dataSource.count
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.dataSource[section].dataList.count
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: HXBHomePlanCell.identifier, for: indexPath) as! HXBHomePlanCell
-        cell.cellViewModel = viewModel.dataSource[indexPath.row]
-        return cell
+        let groupModel = viewModel.dataSource[indexPath.section]
+        let cellViewModel = groupModel.dataList[indexPath.row]
+        
+        switch groupModel.type {
+        case .new:
+            let cell = tableView.dequeueReusableCell(withIdentifier: HXBHomeNewPlanCell.identifier, for: indexPath) as! HXBHomeNewPlanCell
+            cell.cellViewModel = cellViewModel
+            return cell
+        case .recomend:
+            let cell = tableView.dequeueReusableCell(withIdentifier: HXBHomePlanCell.identifier, for: indexPath) as! HXBHomePlanCell
+            cell.cellViewModel = cellViewModel
+            return cell
+        }
+        
     }
 }
 

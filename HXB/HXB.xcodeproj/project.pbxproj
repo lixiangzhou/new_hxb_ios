@@ -66,6 +66,7 @@
 		8D60B48620F5D69D00287E52 /* HXBLoanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D60B48520F5D69D00287E52 /* HXBLoanModel.swift */; };
 		8D60B48820F5D6BC00287E52 /* HXBTransferModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D60B48720F5D6BC00287E52 /* HXBTransferModel.swift */; };
 		8D60B48A20F5DC1F00287E52 /* HXBHomePlanCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D60B48920F5DC1F00287E52 /* HXBHomePlanCellViewModel.swift */; };
+		8D60B49E20F60ABE00287E52 /* HXBHomeListGroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D60B49D20F60ABE00287E52 /* HXBHomeListGroupModel.swift */; };
 		8D7F47F320EF7EDD00F22312 /* HXBRefreshFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7F47F220EF7EDD00F22312 /* HXBRefreshFooter.swift */; };
 /* End PBXBuildFile section */
 
@@ -133,6 +134,7 @@
 		8D60B48520F5D69D00287E52 /* HXBLoanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBLoanModel.swift; sourceTree = "<group>"; };
 		8D60B48720F5D6BC00287E52 /* HXBTransferModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBTransferModel.swift; sourceTree = "<group>"; };
 		8D60B48920F5DC1F00287E52 /* HXBHomePlanCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBHomePlanCellViewModel.swift; sourceTree = "<group>"; };
+		8D60B49D20F60ABE00287E52 /* HXBHomeListGroupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBHomeListGroupModel.swift; sourceTree = "<group>"; };
 		8D7F47F220EF7EDD00F22312 /* HXBRefreshFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBRefreshFooter.swift; sourceTree = "<group>"; };
 		D700915060D738EFF63636CD /* Pods-HXB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HXB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HXB/Pods-HXB.debug.xcconfig"; sourceTree = "<group>"; };
 		FE6381BBAB3DDF96B52EBF4D /* Pods_HXB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HXB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -403,6 +405,7 @@
 		8D57AF9C20E608D700CA3F5A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8D60B49D20F60ABE00287E52 /* HXBHomeListGroupModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -653,6 +656,7 @@
 				8D57AFD320E6362F00CA3F5A /* UIImage+HXB.swift in Sources */,
 				8D57AFA720E6090C00CA3F5A /* HXBInvestController.swift in Sources */,
 				8D60B48420F5D5E500287E52 /* HXBPlanModel.swift in Sources */,
+				8D60B49E20F60ABE00287E52 /* HXBHomeListGroupModel.swift in Sources */,
 				8D60B47C20F5D0B600287E52 /* HXBHomePlanCell.swift in Sources */,
 				8D57AFCD20E6361300CA3F5A /* UIButton+HXB.swift in Sources */,
 				8D39140820E640AE0005AF9E /* HXBMineViewModel.swift in Sources */,

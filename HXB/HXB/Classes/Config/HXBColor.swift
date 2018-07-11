@@ -50,7 +50,9 @@ extension hxb {
         /// FD9718
         static let tagColor = UIColor(stringHexValue: "FD9718")!
         /// FD971814
-        static let tagBgColor = UIColor(stringHexValue: "FD971814")
+        static let tagBgColor = UIColor(stringHexValue: "FD971814")!
+        /// D4AD72
+        static let moneyDescColor = UIColor(stringHexValue: "D4AD72")!
         
         /// 用于特别需要强调和突出的颜色填充，颜色值范围：【fe654d ~ ff3d4f】
         ///

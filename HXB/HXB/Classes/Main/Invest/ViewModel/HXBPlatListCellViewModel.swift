@@ -9,13 +9,21 @@
 import UIKit
 
 class HXBPlatListCellViewModel: HXBViewModel {
+    
     var nameAttributeString: NSAttributedString?
+    
     var tagAttributeString: NSAttributedString?
+    
     var interestAttributeString: NSAttributedString?
+    
     var dateAttributeString: NSAttributedString?
+    
     var hasPreferential = false
+    
     var statusBackgroundImage: UIImage?
+    
     var statusTextColor: UIColor?
+    
     var statusText: String?
     
     var planModel: HXBPlanModel! {

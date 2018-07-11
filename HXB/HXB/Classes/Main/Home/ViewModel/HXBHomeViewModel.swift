@@ -15,7 +15,7 @@ import HandyJSON
 class HXBHomeViewModel: HXBViewModel {
     var (reloadDataSignal, reloadDataObserver) = Signal<(), NoError>.pipe()
     
-    var dataSource = [HXBHomePlanCellViewModel]()
+    var dataSource = [HXBHomeListGroupModel]()
     
     override init() {
         super.init()
@@ -28,6 +28,23 @@ class HXBHomeViewModel: HXBViewModel {
                 if self.requestResult(isSuccess, requestApi) {
                     let json = JSON(requestApi.responseObject!)
                     
+                    var newDataSource = [HXBHomeListGroupModel]()
+                    if let dataList = json["data"]["newbieProductData"]["dataList"].arrayObject,
+                        let modelList = [HXBPlanModel].deserialize(from: dataList) as? [HXBPlanModel] {
+                        
+                        var vmList = [HXBHomePlanCellViewModel]()
+                        for model in modelList {
+                            let vm = HXBHomePlanCellViewModel()
+                            vm.planModel = model
+                            vmList.append(vm)
+                        }
+                        
+                        if vmList.count > 0 {
+                            newDataSource.append(HXBHomeListGroupModel(type: .new, dataList: vmList))
+                        }
+                        
+                    }
+                    
                     if let dataList = json["data"]["homePlanRecommend"].arrayObject,
                         let modelList = [HXBPlanModel].deserialize(from: dataList) as? [HXBPlanModel] {
                         
@@ -37,7 +54,14 @@ class HXBHomeViewModel: HXBViewModel {
                             vm.planModel = model
                             vmList.append(vm)
                         }
-                        self.dataSource = vmList
+                        
+                        if vmList.count > 0 {
+                            newDataSource.append(HXBHomeListGroupModel(type: .recomend, dataList: vmList))
+                        }
+                    }
+                    
+                    if newDataSource.count > 0 {
+                        self.dataSource = newDataSource
                         self.reloadDataObserver.send(value: ())
                     }
                 }

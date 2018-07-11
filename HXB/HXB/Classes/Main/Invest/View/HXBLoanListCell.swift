@@ -46,7 +46,7 @@ class HXBLoanListCell: UITableViewCell {
     
     // MARK: - Private Property
     fileprivate let nameLabel = UILabel(text: "", font: hxb.font.f14, textColor: hxb.color.important)
-    fileprivate let leftMoneyLabel = UILabel(text: "", font: hxb.font.f12, textColor: UIColor(stringHexValue: "D4AD72")!)
+    fileprivate let leftMoneyLabel = UILabel(text: "", font: hxb.font.f12, textColor: hxb.color.moneyDescColor)
     fileprivate let interestLabel = UILabel(text: "", font: hxb.font.f25, textColor: hxb.color.theme)
     fileprivate let interestDescLabel = UILabel(text: "年利率", font: hxb.font.f12, textColor: hxb.color.disableTextColor)
     fileprivate let leftMonthLabel = UILabel(text: "", font: hxb.font.f17, textColor: hxb.color.important)
