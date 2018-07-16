@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		37E15F76F0FC7256DA075C11 /* Pods_HXB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6381BBAB3DDF96B52EBF4D /* Pods_HXB.framework */; };
+		8D142A8120FC893C00520728 /* CollectionViewCalculate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D142A7B20FC893C00520728 /* CollectionViewCalculate.swift */; };
+		8D142A8220FC893C00520728 /* Array+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D142A7D20FC893C00520728 /* Array+Safe.swift */; };
+		8D142A8320FC893C00520728 /* CGPoint+Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D142A7E20FC893C00520728 /* CGPoint+Distance.swift */; };
+		8D142A8420FC893C00520728 /* MMBannerLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D142A7F20FC893C00520728 /* MMBannerLayout.swift */; };
+		8D142A8620FC978B00520728 /* HXBHomeBannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D142A8520FC978B00520728 /* HXBHomeBannerModel.swift */; };
 		8D39140820E640AE0005AF9E /* HXBMineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D39140720E640AE0005AF9E /* HXBMineViewModel.swift */; };
 		8D57AF5D20E5CA2900CA3F5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AF5C20E5CA2900CA3F5A /* AppDelegate.swift */; };
 		8D57AF6420E5CA2B00CA3F5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D57AF6320E5CA2B00CA3F5A /* Assets.xcassets */; };
@@ -45,6 +50,7 @@
 		8D57AFCF20E6361F00CA3F5A /* UIImageView+HXB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AFCE20E6361F00CA3F5A /* UIImageView+HXB.swift */; };
 		8D57AFD320E6362F00CA3F5A /* UIImage+HXB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AFD220E6362F00CA3F5A /* UIImage+HXB.swift */; };
 		8D57AFD520E6363600CA3F5A /* UILabel+HXB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57AFD420E6363600CA3F5A /* UILabel+HXB.swift */; };
+		8D591BEB20F75354007CA4BE /* HXBHomeHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D591BEA20F75354007CA4BE /* HXBHomeHeaderCell.swift */; };
 		8D5EDF7120EDFC680036E156 /* HXBSegView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5EDF7020EDFC680036E156 /* HXBSegView.swift */; };
 		8D5EDF7520EE1C230036E156 /* HXBPlanListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5EDF7420EE1C230036E156 /* HXBPlanListController.swift */; };
 		8D5EDF7720EE1C310036E156 /* HXBLoanListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5EDF7620EE1C310036E156 /* HXBLoanListController.swift */; };
@@ -67,11 +73,17 @@
 		8D60B48820F5D6BC00287E52 /* HXBTransferModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D60B48720F5D6BC00287E52 /* HXBTransferModel.swift */; };
 		8D60B48A20F5DC1F00287E52 /* HXBHomePlanCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D60B48920F5DC1F00287E52 /* HXBHomePlanCellViewModel.swift */; };
 		8D60B49E20F60ABE00287E52 /* HXBHomeListGroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D60B49D20F60ABE00287E52 /* HXBHomeListGroupModel.swift */; };
+		8D60B4E320F74FE300287E52 /* HXBHomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D60B4E220F74FE300287E52 /* HXBHomeHeaderView.swift */; };
 		8D7F47F320EF7EDD00F22312 /* HXBRefreshFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7F47F220EF7EDD00F22312 /* HXBRefreshFooter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		04B33EFEC459D36B73168500 /* Pods-HXB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HXB.release.xcconfig"; path = "Pods/Target Support Files/Pods-HXB/Pods-HXB.release.xcconfig"; sourceTree = "<group>"; };
+		8D142A7B20FC893C00520728 /* CollectionViewCalculate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCalculate.swift; sourceTree = "<group>"; };
+		8D142A7D20FC893C00520728 /* Array+Safe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Safe.swift"; sourceTree = "<group>"; };
+		8D142A7E20FC893C00520728 /* CGPoint+Distance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Distance.swift"; sourceTree = "<group>"; };
+		8D142A7F20FC893C00520728 /* MMBannerLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMBannerLayout.swift; sourceTree = "<group>"; };
+		8D142A8520FC978B00520728 /* HXBHomeBannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBHomeBannerModel.swift; sourceTree = "<group>"; };
 		8D39140720E640AE0005AF9E /* HXBMineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBMineViewModel.swift; sourceTree = "<group>"; };
 		8D39140920E6437F0005AF9E /* ReactiveSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReactiveSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D39140B20E643840005AF9E /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +125,7 @@
 		8D57AFCE20E6361F00CA3F5A /* UIImageView+HXB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+HXB.swift"; sourceTree = "<group>"; };
 		8D57AFD220E6362F00CA3F5A /* UIImage+HXB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+HXB.swift"; sourceTree = "<group>"; };
 		8D57AFD420E6363600CA3F5A /* UILabel+HXB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+HXB.swift"; sourceTree = "<group>"; };
+		8D591BEA20F75354007CA4BE /* HXBHomeHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBHomeHeaderCell.swift; sourceTree = "<group>"; };
 		8D5EDF7020EDFC680036E156 /* HXBSegView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBSegView.swift; sourceTree = "<group>"; };
 		8D5EDF7420EE1C230036E156 /* HXBPlanListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBPlanListController.swift; sourceTree = "<group>"; };
 		8D5EDF7620EE1C310036E156 /* HXBLoanListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBLoanListController.swift; sourceTree = "<group>"; };
@@ -135,6 +148,7 @@
 		8D60B48720F5D6BC00287E52 /* HXBTransferModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBTransferModel.swift; sourceTree = "<group>"; };
 		8D60B48920F5DC1F00287E52 /* HXBHomePlanCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBHomePlanCellViewModel.swift; sourceTree = "<group>"; };
 		8D60B49D20F60ABE00287E52 /* HXBHomeListGroupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBHomeListGroupModel.swift; sourceTree = "<group>"; };
+		8D60B4E220F74FE300287E52 /* HXBHomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBHomeHeaderView.swift; sourceTree = "<group>"; };
 		8D7F47F220EF7EDD00F22312 /* HXBRefreshFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBRefreshFooter.swift; sourceTree = "<group>"; };
 		D700915060D738EFF63636CD /* Pods-HXB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HXB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HXB/Pods-HXB.debug.xcconfig"; sourceTree = "<group>"; };
 		FE6381BBAB3DDF96B52EBF4D /* Pods_HXB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HXB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,6 +183,25 @@
 				04B33EFEC459D36B73168500 /* Pods-HXB.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		8D142A7920FC893C00520728 /* MMBannerLayout */ = {
+			isa = PBXGroup;
+			children = (
+				8D142A7B20FC893C00520728 /* CollectionViewCalculate.swift */,
+				8D142A7C20FC893C00520728 /* Extension */,
+				8D142A7F20FC893C00520728 /* MMBannerLayout.swift */,
+			);
+			path = MMBannerLayout;
+			sourceTree = "<group>";
+		};
+		8D142A7C20FC893C00520728 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8D142A7D20FC893C00520728 /* Array+Safe.swift */,
+				8D142A7E20FC893C00520728 /* CGPoint+Distance.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		8D57AF5020E5CA2900CA3F5A = {
@@ -325,6 +358,7 @@
 		8D57AF7A20E6066C00CA3F5A /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				8D142A7920FC893C00520728 /* MMBannerLayout */,
 				8D57AF8920E6084500CA3F5A /* ActiveLabel */,
 			);
 			path = Vender;
@@ -406,6 +440,7 @@
 			isa = PBXGroup;
 			children = (
 				8D60B49D20F60ABE00287E52 /* HXBHomeListGroupModel.swift */,
+				8D142A8520FC978B00520728 /* HXBHomeBannerModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -415,6 +450,8 @@
 			children = (
 				8D60B47B20F5D0B600287E52 /* HXBHomePlanCell.swift */,
 				8D60B47D20F5D0CE00287E52 /* HXBHomeNewPlanCell.swift */,
+				8D60B4E220F74FE300287E52 /* HXBHomeHeaderView.swift */,
+				8D591BEA20F75354007CA4BE /* HXBHomeHeaderCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -556,6 +593,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HXB/Pods-HXB-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CHIPageControl/CHIPageControl.framework",
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
@@ -573,6 +611,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CHIPageControl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
@@ -634,8 +673,11 @@
 				8D57AFB520E61FEA00CA3F5A /* HXBColor.swift in Sources */,
 				8D60B47820F4A6A600287E52 /* HXBPlatListCellViewModel.swift in Sources */,
 				8D5EDF9520EF6B020036E156 /* HXBRefreshHeader.swift in Sources */,
+				8D142A8420FC893C00520728 /* MMBannerLayout.swift in Sources */,
+				8D60B4E320F74FE300287E52 /* HXBHomeHeaderView.swift in Sources */,
 				8D57AFCF20E6361F00CA3F5A /* UIImageView+HXB.swift in Sources */,
 				8D57AFB720E6201E00CA3F5A /* HXBLength.swift in Sources */,
+				8D142A8220FC893C00520728 /* Array+Safe.swift in Sources */,
 				8D5EDF7120EDFC680036E156 /* HXBSegView.swift in Sources */,
 				8D57AFAF20E60C7A00CA3F5A /* HXBNetworkManager.swift in Sources */,
 				8D57AFB920E6202800CA3F5A /* HXBFont.swift in Sources */,
@@ -643,11 +685,13 @@
 				8D5EDF9320EF508C0036E156 /* HXBTransferListCell.swift in Sources */,
 				8D5EDF7920EE1C6E0036E156 /* HXBTransferListController.swift in Sources */,
 				8D57AF5D20E5CA2900CA3F5A /* AppDelegate.swift in Sources */,
+				8D142A8620FC978B00520728 /* HXBHomeBannerModel.swift in Sources */,
 				8D57AF8F20E6084500CA3F5A /* ActiveBuilder.swift in Sources */,
 				8D57AF8020E6076F00CA3F5A /* HXBNavigationController.swift in Sources */,
 				8D57AF9320E6084500CA3F5A /* StringTrimExtension.swift in Sources */,
 				8D5EDF8D20EF4E390036E156 /* HXBReactiveProtocol.swift in Sources */,
 				8D60B48820F5D6BC00287E52 /* HXBTransferModel.swift in Sources */,
+				8D142A8320FC893C00520728 /* CGPoint+Distance.swift in Sources */,
 				8D57AF8420E6079300CA3F5A /* HXBViewModel.swift in Sources */,
 				8D5EDF8F20EF506F0036E156 /* HXBPlanListCell.swift in Sources */,
 				8D7F47F320EF7EDD00F22312 /* HXBRefreshFooter.swift in Sources */,
@@ -656,6 +700,7 @@
 				8D57AFD320E6362F00CA3F5A /* UIImage+HXB.swift in Sources */,
 				8D57AFA720E6090C00CA3F5A /* HXBInvestController.swift in Sources */,
 				8D60B48420F5D5E500287E52 /* HXBPlanModel.swift in Sources */,
+				8D142A8120FC893C00520728 /* CollectionViewCalculate.swift in Sources */,
 				8D60B49E20F60ABE00287E52 /* HXBHomeListGroupModel.swift in Sources */,
 				8D60B47C20F5D0B600287E52 /* HXBHomePlanCell.swift in Sources */,
 				8D57AFCD20E6361300CA3F5A /* UIButton+HXB.swift in Sources */,
@@ -671,6 +716,7 @@
 				8D5EDF9120EF507C0036E156 /* HXBLoanListCell.swift in Sources */,
 				8D57AFBB20E6204100CA3F5A /* HXBConfig.swift in Sources */,
 				8D57AFC320E6282300CA3F5A /* HXBCode.swift in Sources */,
+				8D591BEB20F75354007CA4BE /* HXBHomeHeaderCell.swift in Sources */,
 				8D57AF9120E6084500CA3F5A /* ActiveType.swift in Sources */,
 				8D57AFC920E62EDB00CA3F5A /* HXBSignal.swift in Sources */,
 				8D5EDF7B20EE2B320036E156 /* HXBTableView.swift in Sources */,
@@ -806,10 +852,7 @@
 				DEVELOPMENT_TEAM = Z9M2NMJFP5;
 				INFOPLIST_FILE = HXB/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lxz.HXB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -827,10 +870,7 @@
 				DEVELOPMENT_TEAM = Z9M2NMJFP5;
 				INFOPLIST_FILE = HXB/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lxz.HXB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

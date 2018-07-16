@@ -17,6 +17,8 @@ class HXBHomeViewModel: HXBViewModel {
     
     var dataSource = [HXBHomeListGroupModel]()
     
+    var bannerList = [HXBHomeBannerModel]()
+    
     override init() {
         super.init()
     }
@@ -27,6 +29,10 @@ class HXBHomeViewModel: HXBViewModel {
             }.startWithValues { isSuccess, requestApi in
                 if self.requestResult(isSuccess, requestApi) {
                     let json = JSON(requestApi.responseObject!)
+                    
+                    if let banners = [HXBHomeBannerModel].deserialize(from: json["data"]["bannerList"].arrayObject) as? [HXBHomeBannerModel] {
+                        self.bannerList = banners
+                    }
                     
                     var newDataSource = [HXBHomeListGroupModel]()
                     if let dataList = json["data"]["newbieProductData"]["dataList"].arrayObject,

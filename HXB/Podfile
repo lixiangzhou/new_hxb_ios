@@ -15,5 +15,6 @@ pod 'SwiftyJSON'
 pod 'IQKeyboardManagerSwift'
 pod 'WKWebViewJavascriptBridge'
 pod 'XZLib'
+pod 'CHIPageControl'
 
 end

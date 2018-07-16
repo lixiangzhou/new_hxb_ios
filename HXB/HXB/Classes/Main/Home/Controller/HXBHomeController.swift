@@ -23,6 +23,7 @@ class HXBHomeController: HXBViewController {
     fileprivate let msgDot = UIView()
     fileprivate var tableView = HXBTableView(style: .plain, dataSource: nil, delegate: nil)
     fileprivate var viewModel: HXBHomeViewModel!
+    fileprivate weak var headerView: HXBHomeHeaderView!
 }
 
 // MARK: - UI
@@ -40,6 +41,11 @@ extension HXBHomeController {
         tableView.delegate = self
         tableView.sectionHeaderHeight = 42
         view.addSubview(tableView)
+        
+        let headerView = HXBHomeHeaderView(frame: CGRect(x: 0, y: 0, width: UIScreen.zz_width, height: 200))
+        tableView.tableHeaderView = headerView
+        self.headerView = headerView
+        
         
         tableView.snp.makeConstraints { maker in
             maker.top.equalToSuperview().offset(view.safeAreaInsets.top)
@@ -75,6 +81,7 @@ extension HXBHomeController {
         viewModel.reloadDataSignal.observeValues { [weak self] in
             self?.tableView.reloadData()
             self?.tableView.header?.endRefreshing()
+            self?.headerView.bannerList = self?.viewModel.bannerList
         }
     }
 }
